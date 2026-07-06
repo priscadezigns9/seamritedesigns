@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Journal — Seamrite Designs</title>
+    <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@200;300;400;500&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --surface: #0A0008;
+            --pink: #FF69B4;
+            --pink-soft: #FF1493;
+            --pink-border: rgba(255,105,180,0.18);
+            --bg-black: #000000;
+            --text-main: #F5E6F0;
+            --text-dim: rgba(245,230,240,0.5);
+            --font-logo: 'Great Vibes', cursive;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Jost', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg-black); color: var(--text-main); font-family: var(--font-body); line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 6%; }
+        
+        nav { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--pink-border); position: sticky; top: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(20px); z-index: 100; }
+        .logo { font-family: var(--font-logo); font-size: 2.6rem; text-decoration: none; color: var(--pink); text-shadow: 0 0 30px rgba(255,105,180,0.4); }
+
+        header { padding: 120px 0 60px; text-align: center; }
+        h1 { font-family: var(--font-heading); font-size: 4rem; color: #fff; margin-bottom: 15px; font-weight: 300; font-style: italic; }
+        .subtitle { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 6px; color: var(--pink); margin-bottom: 40px; font-weight: 500; }
+
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; padding-bottom: 150px; }
+        .blog-card { text-decoration: none; color: inherit; border: 1px solid var(--pink-border); padding: 30px; border-radius: 4px; transition: all 0.3s; background: #050004; }
+        .blog-card:hover { border-color: var(--pink); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,105,180,0.1); }
+        .blog-date { font-size: 11px; letter-spacing: 2px; color: var(--pink); text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .blog-title { font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 15px; font-weight: 400; line-height: 1.3; }
+        .blog-snippet { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px; font-weight: 300; }
+        .read-more { font-size: 12px; letter-spacing: 2px; color: var(--pink); font-weight: 500; text-transform: uppercase; }
+
+        footer { padding: 80px 0; border-top: 1px solid var(--pink-border); text-align: center; background: #050004; }
+        .footer-logo { font-family: var(--font-logo); font-size: 2.5rem; color: var(--pink); margin-bottom: 25px; display: block; text-decoration: none; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 11px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <nav>
+                <a href='/seamritedesigns/' class='logo'>Seamrite Designs</a>
+                <div style='display:flex; gap:30px;'>
+                    <a href='/seamritedesigns/' style='text-decoration:none; color:var(--text-dim); font-size:12px; letter-spacing:2px;'>HOME</a>
+                    <a href='/seamritedesigns/shop/' style='text-decoration:none; color:var(--text-dim); font-size:12px; letter-spacing:2px;'>SHOP</a>
+                </div>
+            </nav>
+            <h1 style='margin-top:100px;'>The Journal</h1>
+            <p class='subtitle'>Art, Fashion & The Bespoke Lifestyle</p>
+        </div>
+    </header>
+
+    <div class='container'>
+        <div class='blog-grid'>
+            <a href='/seamritedesigns/blog/the-art-of-fabric-selection/' class='blog-card'>
+                <span class='blog-date'>May 24, 2026</span>
+                <h2 class='blog-title'>The Art of Fabric Selection</h2>
+                <p class='blog-snippet'>Understanding the drape, weight, and soul of premium textiles for your next bespoke piece.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+            <a href='/seamritedesigns/blog/the-bespoke-process/' class='blog-card'>
+                <span class='blog-date'>May 20, 2026</span>
+                <h2 class='blog-title'>Inside the Bespoke Process</h2>
+                <p class='blog-snippet'>From initial sketch to final fitting: how we bring your vision to life in our studio.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+            <a href='/seamritedesigns/blog/why-bespoke-clothing-is-worth-it/' class='blog-card'>
+                <span class='blog-date'>May 15, 2026</span>
+                <h2 class='blog-title'>Why Bespoke is an Investment</h2>
+                <p class='blog-snippet'>Discover the longevity, fit, and personal expression that only custom-made clothing can provide.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+            <a href='/seamritedesigns/blog/custom-tailoring-bespoke-fits-better/' class='blog-card'>
+                <span class='blog-date'>May 10, 2026</span>
+                <h2 class='blog-title'>Why Bespoke Fits Better</h2>
+                <p class='blog-snippet'>The technical difference between off-the-rack, made-to-measure, and true bespoke tailoring.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+            <a href='/seamritedesigns/blog/find-right-seamstress-special-occasion/' class='blog-card'>
+                <span class='blog-date'>May 05, 2026</span>
+                <h2 class='blog-title'>Choosing for Your Special Occasion</h2>
+                <p class='blog-snippet'>How to find the perfect artisan for your milestone moments and red-carpet appearances.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+            <a href='/seamritedesigns/blog/caring-for-bespoke-garments/' class='blog-card'>
+                <span class='blog-date'>April 28, 2026</span>
+                <h2 class='blog-title'>Caring for Your Bespoke Pieces</h2>
+                <p class='blog-snippet'>Expert advice on preserving the lifetime of your hand-crafted wardrobe investments.</p>
+                <span class='read-more'>Read Article →</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class='container'>
+            <a href='/seamritedesigns/' class='footer-logo'>Seamrite Designs</a>
+            <div class='footer-links'>
+                <a href='/legal/privacy/'>PRIVACY</a>
+                <a href='/legal/terms/'>TERMS</a>
+                <a href='/legal/affiliate-disclosure/'>DISCLOSURE</a>
+            </div>
+            <p style='font-size:10px; color:rgba(245,230,240,0.2); letter-spacing:2px;'>© 2026 SEAMRITE DESIGNS. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+</html>
