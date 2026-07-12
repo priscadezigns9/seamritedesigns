@@ -1,2 +1,889 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Seamrite Designs</title></head><body><h1>Seamrite Designs</h1><p>Syncing...</p></body></html>
-<!-- Triggering SSL sync 2026-07-12 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="/seamritedesigns/manifest.json">
+  <meta name="theme-color" content="#FF69B4">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Seamrite">
+  <link rel="apple-touch-icon" href="/logos/seamritedesigns.jpg">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Seamrite Designs | Fashion & Art</title>
+<meta name="description" content="Seamrite Designs — where fashion meets art. Explore curated collections, original artwork, and wearable design that makes a statement.">
+<link rel="icon" type="image/png" href="/favicon.png?v=4">
+<link rel="apple-touch-icon" href="/favicon.png?v=4">
+<link rel="icon" type="image/png" href="/logos/prisca-dezigns-logo.png"/>
+<link rel="apple-touch-icon" href="/logos/prisca-dezigns-logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#000;color:#F5E6F0;font-family:'Jost',sans-serif;overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+:root{
+  --pink:#FF69B4;
+  --pink-soft:#FF1493;
+  --pink-border:rgba(255,105,180,0.22);
+  --surface:#0A0008;
+  --dim:#7A4060;
+  --border:rgba(255,105,180,0.14);
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;transition:background 0.4s,border-color 0.4s}
+nav.scrolled{background:rgba(0,0,0,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Great Vibes',cursive;font-size:2rem;color:#fff;letter-spacing:1px;line-height:1}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:0.68rem;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;color:rgba(245,230,240,0.4);transition:color 0.2s}
+.nav-links a:hover{color:#fff}
+.nav-btn-nehneh{border:1px solid var(--pink-border);color:var(--pink);padding:8px 22px;font-size:0.68rem;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.25s}
+.nav-btn-nehneh:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
+.nav-cta{background:transparent;border:1px solid var(--pink);color:#1a1a1a;padding:9px 24px;font-size:0.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:all 0.25s}
+.nav-cta:hover{background:var(--pink);color:#fff;transform:translateY(-1px)}
+
+/* ── SEAMRITE HERO ── */
+.seamrite-hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 7% 80px;position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:900px;height:700px;background:radial-gradient(ellipse,rgba(255,105,180,0.09) 0%,transparent 65%);pointer-events:none}
+.hero-logo-wrap{margin-bottom:28px;position:relative;z-index:1}
+.hero-wordmark{font-family:"Great Vibes",cursive;font-size:clamp(3rem,8vw,6rem);color:#fff;letter-spacing:1px;line-height:1.1;text-shadow:0 0 60px rgba(255,105,180,0.5),0 0 20px rgba(255,105,180,0.3);display:block}
+.hero-tag{font-size:0.65rem;font-weight:400;letter-spacing:4px;text-transform:uppercase;color:var(--pink);margin-bottom:20px;position:relative;z-index:1}
+.seamrite-hero h1{font-family:'Great Vibes',cursive;font-size:clamp(4rem,10vw,8.5rem);color:#fff;line-height:1;margin-bottom:14px;position:relative;z-index:1;text-shadow:0 0 80px rgba(255,105,180,0.18)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.25rem);font-style:italic;color:rgba(245,230,240,0.5);max-width:480px;margin:0 auto 44px;position:relative;z-index:1}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.btn-pink{background:var(--pink);color:#fff;padding:14px 36px;font-size:0.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.25s;display:inline-block}
+.btn-pink:hover{background:var(--pink-soft);transform:translateY(-2px)}
+.btn-outline{border:1px solid var(--pink-border);color:rgba(245,230,240,0.45);padding:14px 36px;font-size:0.75rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:all 0.25s;display:inline-block}
+.btn-outline:hover{border-color:var(--pink);color:#fff}
+.scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:1}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--pink),transparent)}
+.scroll-label{font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,105,180,0.35)}
+
+/* ── SEAMRITE SERVICES ── */
+.rule{border:none;border-top:1px solid var(--border)}
+.pink-line{height:1px;background:linear-gradient(to right,transparent,var(--pink),transparent)}
+.section{padding:100px 7%;max-width:1200px;margin:0 auto}
+.sec-label{font-size:0.63rem;letter-spacing:4px;text-transform:uppercase;color:var(--pink);margin-bottom:16px;font-weight:500}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;letter-spacing:-1.5px;line-height:1.05;margin-bottom:48px}
+h2 em{font-style:italic;color:var(--pink)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border)}
+.service{background:#000;padding:36px 28px;transition:background 0.25s}
+.service:hover{background:var(--surface)}
+
+.service-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#fff;margin-bottom:8px}
+.service-desc{font-size:0.78rem;color:rgba(245,230,240,0.38);line-height:1.65;font-weight:300}
+
+/* ── DIVIDER BAND ── */
+.divide-band{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 7%;text-align:center}
+.divide-band p{font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,105,180,0.4);margin-bottom:14px}
+.divide-band h3{font-family:'Great Vibes',cursive;font-size:clamp(2rem,5vw,3.5rem);color:#fff}
+
+/* ── NEH NEH SECTION ── */
+.nehneh-hero{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 7% 80px;position:relative;overflow:hidden;background:#0A0009}
+.nehneh-bg-word{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,22vw,280px);font-weight:300;letter-spacing:-4px;color:rgba(255,105,180,0.03);pointer-events:none;white-space:nowrap;top:50%;left:50%;transform:translate(-50%,-50%);user-select:none}
+.nehneh-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.8rem,9vw,8.5rem);font-weight:300;line-height:0.95;letter-spacing:-3px;margin-bottom:28px;color:#fff}
+.nehneh-hero h1 em{font-style:italic;color:var(--pink)}
+.hero-eyebrow{font-size:0.65rem;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--pink);margin-bottom:24px}
+.nehneh-sub{font-size:0.9rem;font-weight:300;letter-spacing:0.5px;color:rgba(245,230,240,0.45);max-width:440px;margin:0 auto 44px;line-height:1.8}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-text p{font-size:0.9rem;color:rgba(245,230,240,0.52);line-height:1.9;font-weight:300;margin-bottom:16px}
+.about-stats{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.stat-row{background:#0A0009;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;transition:background 0.2s}
+.stat-row:hover{background:var(--surface)}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--pink);letter-spacing:-1px}
+.stat-label{font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);font-weight:400}
+
+/* ── PIECES ── */
+.pieces-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.piece{background:#0A0009;padding:44px 36px;transition:background 0.25s}
+.piece:hover{background:var(--surface)}
+.piece-num{font-family:'Cormorant Garamond',serif;font-size:0.75rem;letter-spacing:2px;color:rgba(255,105,180,0.35);margin-bottom:20px}
+.piece-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;margin-bottom:12px;color:#fff}
+.piece-desc{font-size:0.83rem;color:rgba(245,230,240,0.42);line-height:1.7;font-weight:300}
+.piece-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:0.62rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--pink);border:1px solid var(--border);padding:5px 12px}
+
+/* ── GALLERY ── */
+.gallery-section{padding:100px 7%;max-width:1400px;margin:0 auto}
+.gallery-intro{max-width:600px;margin-bottom:60px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.gallery-item{position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer;background:#100012}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease,filter 0.4s ease;filter:saturate(0.85)}
+.gallery-item:hover img{transform:scale(1.05);filter:saturate(1)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,0,9,0.85) 0%,transparent 50%);opacity:0;transition:opacity 0.3s;display:flex;align-items:flex-end;padding:20px}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-caption{font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:rgba(245,230,240,0.8);letter-spacing:1px;font-style:italic}
+.gallery-item.large{grid-column:span 2;aspect-ratio:16/9}
+
+/* ── PROCESS ── */
+.process-strip{display:flex;flex-direction:column;gap:1px;background:var(--border);margin-top:48px}
+.process-row{background:#0A0009;padding:28px 36px;display:grid;grid-template-columns:52px 1fr;gap:28px;align-items:start;transition:background 0.2s}
+.process-row:hover{background:var(--surface)}
+.pr-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:rgba(255,105,180,0.28);line-height:1}
+.pr-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:#fff;margin-bottom:6px}
+.pr-body p{font-size:0.82rem;color:rgba(245,230,240,0.42);line-height:1.7;font-weight:300}
+
+/* ── CTA BAND ── */
+.cta-band{background:var(--pink);padding:100px 7%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'NEH NEH';position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(90px,18vw,220px);font-weight:300;color:rgba(0,0,0,0.08);top:50%;left:50%;transform:translate(-50%,-50%);letter-spacing:8px;white-space:nowrap;pointer-events:none}
+.cta-band h2{font-family:'Cormorant Garamond',serif;color:#fff;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;letter-spacing:-1px;margin-bottom:14px;position:relative}
+.cta-band p{color:rgba(255,255,255,0.7);margin-bottom:40px;font-size:0.88rem;letter-spacing:0.5px;position:relative;font-weight:300}
+.btn-white{background:#fff;color:var(--pink);padding:14px 40px;font-size:0.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;display:inline-block;position:relative;transition:all 0.2s}
+.btn-white:hover{background:#F5E6F0;transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:44px 7%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;background:#000}
+.foot-logo{font-family:'Great Vibes',cursive;font-size:1.5rem;color:#fff}
+.foot-links{display:flex;gap:28px;flex-wrap:wrap}
+.foot-links a{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);transition:color 0.2s}
+.foot-links a:hover{color:#fff}
+.foot-copy{font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim)}
+
+/* ── LIGHTBOX ── */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.97);z-index:999;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:88vh;object-fit:contain}
+.lb-close{position:absolute;top:24px;right:28px;font-size:1.8rem;color:rgba(245,230,240,0.5);cursor:pointer;transition:color 0.2s;font-family:'Cormorant Garamond',serif;font-weight:300}
+.lb-close:hover{color:#fff}
+
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:48px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-item.large{grid-column:span 2}}
+@media(max-width:600px){.pieces-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.gallery-item.large{grid-column:span 1;aspect-ratio:4/3}.nav-links a:not(.nav-cta){display:none}.seamrite-hero h1,.nehneh-hero h1{letter-spacing:-2px}}
+
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1001}
+  .hamburger span{display:block;width:25px;height:3px;background:#1a1a1a;border-radius:3px;transition:all .3s}
+  .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-6px)}
+  .mobile-drawer{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;z-index:999;flex-direction:column;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+  .mobile-drawer a{padding:.75rem 1rem;font-weight:600;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #f0f0f0}
+  .mobile-drawer.open{display:flex}
+  @media(max-width:768px){.hamburger{display:flex}nav .nav-links{display:none}}
+
+  .nav-shop{background:var(--pink);color:#fff!important;padding:.45rem 1.1rem;border-radius:25px;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s}
+  .nav-shop:hover{background:var(--pink-soft);color:#fff!important}
+
+.toggle-pill{width:46px;height:26px;background:rgba(255,105,180,0.12);border:1px solid rgba(255,105,180,0.3);border-radius:13px;position:relative;transition:all 0.35s;padding:3px}
+.toggle-pill::after{content:'';width:18px;height:18px;border-radius:50%;background:#FF69B4;position:absolute;left:3px;top:3px;transition:transform 0.35s cubic-bezier(.4,0,.2,1),background 0.35s;box-shadow:0 0 10px rgba(255,105,180,0.5)}
+
+
+
+
+
+
+@media(max-width:480px){
+  .hero h1,.hero-title{font-size:clamp(26px,8vw,36px)!important}
+  .hero{padding:48px 4% 32px!important;text-align:center}
+  .section-title{font-size:22px!important}
+  .price-card{padding:20px 16px!important}
+  nav{padding:0 4%}
+}
+</style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Seamrite Designs | Fashion & Art">
+  <meta name="twitter:description" content="Seamrite Designs — where fashion meets art. Explore curated collections, original artwork, and wearable design that makes a statement.">
+<meta name="keywords" content="fashion design, art clothing, wearable art, clothing brand, fashion boutique">
+<meta name="twitter:image" content="https://priscadezigns.org/site/logos/prisca-dezigns-logo.png">
+
+<style>/* ── PREMIUM ANIMATIONS — Prisca Dezigns Empire ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.92)}to{opacity:1;transform:scale(1)}}
+@keyframes shimmerAccent{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 24px rgba(123,53,212,0.3)}50%{box-shadow:0 0 48px rgba(176,106,255,0.6)}}
+@keyframes borderFlow{0%{border-color:rgba(176,106,255,0.12)}50%{border-color:rgba(176,106,255,0.42)}100%{border-color:rgba(176,106,255,0.12)}}
+@keyframes typewriter{from{width:0}to{width:100%}}
+
+/* Scroll reveal */
+.anim-ready{opacity:0;will-change:transform,opacity}
+.anim-ready.anim-visible{animation:fadeUp 0.72s cubic-bezier(.22,1,.36,1) forwards}
+.anim-left.anim-visible{animation:slideLeft 0.72s cubic-bezier(.22,1,.36,1) forwards}
+.anim-right.anim-visible{animation:slideRight 0.72s cubic-bezier(.22,1,.36,1) forwards}
+.anim-scale.anim-visible{animation:scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) forwards}
+
+/* Accent shimmer */
+.accent,h1 .accent,h2 .accent,h3 .accent{
+  background:linear-gradient(90deg,#B06AFF,#7B35D4,#e040fb,#B06AFF);
+  background-size:300% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmerAccent 4s ease infinite;
+}
+
+/* Card hover lift */
+[class*="card"],[class*="plan-card"],[class*="service-card"],[class*="feature-card"],[class*="pricing-card"],[class*="brand-card"]{
+  transition:transform 0.32s cubic-bezier(.34,1.56,.64,1),box-shadow 0.32s!important;
+}
+[class*="card"]:not(nav):not(header):not(footer):hover,[class*="plan-card"]:hover{
+  transform:translateY(-9px) scale(1.015)!important;
+  box-shadow:0 28px 64px rgba(123,53,212,0.2)!important;
+}
+
+/* CTA / button hover */
+a[class*="cta"],a[class*="-btn"],button[class*="cta"],button[class*="-btn"],
+[class*="plan-cta"],[class*="hero-btn"],[class*="hero-cta"]{
+  transition:transform 0.2s,box-shadow 0.2s!important;
+}
+a[class*="cta"]:hover,a[class*="-btn"]:hover,button[class*="cta"]:hover,button[class*="-btn"]:hover,
+[class*="plan-cta"]:hover,[class*="hero-btn"]:hover,[class*="hero-cta"]:hover{
+  transform:translateY(-4px)!important;
+  box-shadow:0 10px 32px rgba(123,53,212,0.42)!important;
+}
+
+/* Hero logo / icon float */
+[class*="hero-logo"] img,[class*="hero"] > div > img,[class*="hero"] > img{
+  animation:floatY 4.5s ease-in-out infinite;
+}
+
+/* Stat numbers */
+[class*="stat-num"],[class*="counter-"],[class*="-count"]{
+  text-shadow:0 0 22px rgba(176,106,255,0.5);
+  animation:glowPulse 3s ease infinite;
+}
+
+/* Nav entrance */
+nav,header{animation:fadeIn 0.45s ease both}
+
+/* Feature icons on hover */
+[class*="feature"]:hover [class*="icon"],
+[class*="feature"]:hover svg,
+[class*="app-icon"]:hover{
+  transform:scale(1.18) rotate(-6deg);
+  transition:transform 0.25s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* Continuous border shimmer on cards */
+[class*="plan-card"],[class*="brand-card"]{animation:borderFlow 5s ease infinite}
+
+/* Section dividers fade-in */
+[class*="divider"],[class*="section-glow"]{animation:fadeIn 1s ease both}
+
+/* === STANDARD FLOAT STACK === */
+</style>
+</style>
+
+
+
+
+<style>.seamrite-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0A0009 0%,#120010 50%,#0A0009 100%) !important;background-size:300% 300% !important;animation:sdHeroBG 10s ease infinite !important}
+.seamrite-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 75% 35%,rgba(255,105,180,0.14) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 25% 75%,rgba(255,20,147,0.08) 0%,transparent 60%);pointer-events:none;animation:sdOrbFloat 9s ease-in-out infinite}
+@keyframes sdHeroBG{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes sdOrbFloat{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(25px,-18px) scale(1.05)}70%{transform:translate(-18px,12px) scale(0.97)}}
+.nehneh-hero{position:relative;overflow:hidden}
+.nehneh-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 30% 50%,rgba(255,105,180,0.09) 0%,transparent 60%);pointer-events:none;animation:sdOrbFloat 11s ease-in-out infinite}
+.seamrite-hero h1,.seamrite-hero h2,.seamrite-hero .hero-title{opacity:0;transform:translateY(40px);animation:sdFadeUp 0.9s 0.4s cubic-bezier(.16,1,.3,1) forwards}
+.seamrite-hero p,.seamrite-hero .hero-sub{opacity:0;transform:translateY(24px);animation:sdFadeUp 0.8s 0.65s cubic-bezier(.16,1,.3,1) forwards}
+.seamrite-hero .hero-actions,.seamrite-hero a.btn{opacity:0;transform:translateY(18px);animation:sdFadeUp 0.7s 0.85s cubic-bezier(.16,1,.3,1) forwards}
+.nehneh-hero h1,.nehneh-hero h2{opacity:0;transform:translateY(30px);animation:sdFadeUp 0.8s 0.3s cubic-bezier(.16,1,.3,1) forwards}
+.nehneh-hero p{opacity:0;transform:translateY(20px);animation:sdFadeUp 0.7s 0.5s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes sdFadeUp{to{opacity:1;transform:translateY(0)}}
+.btn,a.cta,.hero-btn{position:relative;overflow:hidden}
+.btn::after,a.cta::after{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);transform:skewX(-12deg);animation:sdBtnShimmer 4s 1.5s ease-in-out infinite}
+@keyframes sdBtnShimmer{0%,100%{left:-100%}40%,60%{left:150%}}
+.sd-reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
+.sd-reveal.sd-visible{opacity:1;transform:translateY(0)}
+.product-card,.item-card,.lookbook-item,.grid-item,.collection-item{opacity:0;transform:translateY(24px) scale(0.98);transition:opacity 0.6s cubic-bezier(.16,1,.3,1),transform 0.6s cubic-bezier(.16,1,.3,1),box-shadow 0.3s ease}
+.product-card.sd-visible,.item-card.sd-visible,.lookbook-item.sd-visible,.grid-item.sd-visible,.collection-item.sd-visible{opacity:1;transform:translateY(0) scale(1)}
+.product-card:hover,.item-card:hover,.lookbook-item:hover{transform:translateY(-6px) scale(1.02) !important;box-shadow:0 16px 48px rgba(255,105,180,0.2) !important}
+img.sd-img-reveal{clip-path:inset(0 100% 0 0);transition:clip-path 0.9s cubic-bezier(.16,1,.3,1)}
+img.sd-img-reveal.sd-visible{clip-path:inset(0 0% 0 0)}
+#navbar.sd-scrolled{background:rgba(10,0,9,0.95) !important;backdrop-filter:blur(20px) !important;box-shadow:0 1px 0 rgba(255,105,180,0.15) !important}
+#sd-cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,105,180,0.07) 0%,transparent 70%);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:left .15s ease,top .15s ease;will-change:left,top}
+#sd-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#FF1493,#FF69B4,#FF1493);background-size:200%;z-index:10001;width:0%;transition:width 0.1s linear;animation:sdProgGlow 2s ease-in-out infinite}
+@keyframes sdProgGlow{0%,100%{background-position:0% 50%;box-shadow:0 0 6px rgba(255,20,147,0.5)}50%{background-position:100% 50%;box-shadow:0 0 12px rgba(255,105,180,0.7)}}
+#sd-particles{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.5}
+/* Fix: ensure gallery images are visible */
+.sd-img-reveal{clip-path:none !important;}
+.sd-img-reveal.sd-visible{clip-path:none !important;}
+</style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Seamrite Designs — Custom Fashion, Wearable Art & Bespoke Clothing">
+  <meta property="og:description" content="Seamrite Designs creates custom fashion and wearable art that blurs the line between clothing and expression. Each piece is an original.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/seamritedesigns.jpg">
+  <meta property="og:url" content="https://priscadezigns.org/seamritedesigns/">
+  <meta property="og:site_name" content="Seamrite Designs">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Seamrite Designs — Custom Fashion, Wearable Art & Bespoke Clothing">
+  <meta name="twitter:description" content="Seamrite Designs creates custom fashion and wearable art that blurs the line between clothing and expression. Each piece is an original.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/seamritedesigns.jpg">
+  <!-- SEO: Canonical + Robots -->
+  <link rel="canonical" href="https://priscadezigns.org/seamritedesigns/">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="custom fashion Trinidad, wearable art, bespoke clothing, fashion designer Caribbean">
+  <!-- SEO: Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Seamrite Designs",
+  "url": "https://priscadezigns.org/seamritedesigns/",
+  "description": "Seamrite Designs creates custom fashion and wearable art that blurs the line between clothing and expression. Each piece is an original.",
+  "image": "https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/seamritedesigns.jpg",
+  "areaServed": "Caribbean",
+  "priceRange": "$$"
+}
+  </script>
+</head>
+<body>
+<!-- BACK TO PORTFOLIO -->
+<a href="https://priscadezigns.org/portfolio/" style="position:fixed;top:16px;left:16px;z-index:99999;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,0.75);color:#fff;text-decoration:none;padding:8px 16px;border-radius:100px;font-family:sans-serif;font-size:12px;font-weight:700;letter-spacing:0.5px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);">← Back to Portfolio</a>
+
+
+<!-- NAV -->
+<nav id="navbar">
+  <span class="nav-logo">Seamrite Designs</span>
+  <div class="nav-links">
+    <a href="#seamrite-services">Services</a>
+    <a href="/seamritedesigns/blog/" style="color:#FF4DA6;font-weight:700;letter-spacing:2px">Blog</a>
+    <a href="#nehneh" class="nav-btn-nehneh">Neh Neh ✦</a>
+    <a href="/seamritedesigns/shop/" class="nav-shop">My Shop Picks ✦</a><a href="https://wa.me/18687910293?text=Hi%20Seamrite%20Designs!%20I%27d%20like%20to%20book%20a%20consultation." class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+  </div>
+  <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-drawer').classList.toggle('open')"><span></span><span></span><span></span></button>
+
+</nav>
+<div class="mobile-drawer">
+  <a href="/">Home</a>
+  <a href="#seamrite-services">Services</a>
+  <a href="#nehneh">Neh Neh</a>
+  <a href="/seamritedesigns/shop/">My Shop Picks ✦</a>
+  <a href="https://wa.me/18687910293" target="_blank">Book Now</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     SEAMRITE DESIGNS — HERO
+══════════════════════════════════════ -->
+<section class="seamrite-hero" id="seamrite">
+  <div class="hero-glow"></div>
+  <div class="hero-logo-wrap">
+    <span class="hero-wordmark">Seamrite Designs</span>
+  </div>
+  <p class="hero-tag">Customized Clothing · Trinidad & Tobago</p>
+  <h1>Wear something<br/>made for you.</h1>
+  <p class="hero-sub">Every stitch. Every seam. Every detail — crafted by hand, made to measure, built to turn heads.</p>
+  <div class="hero-btns">
+    <a class="btn-pink" href="https://wa.me/18687910293?text=Hi%20Seamrite%20Designs!%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Book a consultation</a>
+    <a class="btn-outline" href="#seamrite-services">Our services ↓</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</section>
+
+<div class="pink-line"></div>
+
+<!-- SEAMRITE SERVICES -->
+<div class="section" id="seamrite-services">
+  <p class="sec-label">What we create</p>
+  <h2>Made for every<br/><em>occasion.</em></h2>
+  <div class="services-grid">
+    <div class="service"><div class="service-name">Custom Dresses</div><div class="service-desc">From casual to couture — every dress is patterned, cut, and sewn to your measurements.</div></div>
+    <div class="service"><div class="service-name">Uniforms</div><div class="service-desc">School, corporate, hospitality — smart uniforms tailored to fit your team perfectly.</div></div>
+    <div class="service"><div class="service-name">Swimwear</div><div class="service-desc">Custom swimwear and carnival costumes — bold, beautiful, built for the  sun.</div></div>
+    <div class="service"><div class="service-name">Costumes</div><div class="service-desc">Carnival, theatre, events — statement pieces that command attention in any crowd.</div></div>
+    <div class="service"><div class="service-name">Alterations</div><div class="service-desc">Bringing your favourite pieces back to life — or making them fit like they were made for you.</div></div>
+    <div class="service"><div class="service-name">Bridal & Formal</div><div class="service-desc">Wedding gowns, bridesmaid dresses, prom — unforgettable pieces for life's biggest moments.</div></div>
+  </div>
+</div>
+
+<div class="pink-line"></div>
+
+<!-- SEWING PRODUCTS -->
+<div class="section" id="sewing-products">
+  <p class="sec-label">Tools of the craft</p>
+  <h2>Our favourite<br/><em>sewing essentials.</em></h2>
+  <p style="font-size:0.85rem;color:rgba(255,224,239,0.45);line-height:1.8;font-weight:300;max-width:520px;margin-bottom:48px">The products we use in our studio — sewing machines, threads, fabrics, and notions. Every recommendation is tried, tested, and trusted.</p>
+  <div class="services-grid">
+    <div class="service">
+      <div class="service-name">Sewing Machines</div>
+      <div class="service-desc">Brother, Singer, Janome — from beginner models to industrial-grade machines for heavy fabrics.</div>
+      <div style="margin-top:14px"><a href="https://www.amazon.com/s?k=sewing+machines" target="_blank" rel="noopener" style="font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);border-bottom:1px solid var(--pink-border);padding-bottom:2px">Shop machines &rarr;</a></div>
+    </div>
+    <div class="service">
+      <div class="service-name">Thread &amp; Notions</div>
+      <div class="service-desc">Quality thread in every colour, needles, bobbins, zippers, and trims. The small things that make a big difference.</div>
+      <div style="margin-top:14px"><a href="https://www.amazon.com/s?k=sewing+thread+notions" target="_blank" rel="noopener" style="font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);border-bottom:1px solid var(--pink-border);padding-bottom:2px">Shop notions &rarr;</a></div>
+    </div>
+    <div class="service">
+      <div class="service-name">Fabrics &amp; Textiles</div>
+      <div class="service-desc">Chiffon, satin, spandex, cotton — sourced for quality and feel. The foundation of every great piece starts here.</div>
+      <div style="margin-top:14px"><a href="https://www.amazon.com/s?k=sewing+fabric" target="_blank" rel="noopener" style="font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);border-bottom:1px solid var(--pink-border);padding-bottom:2px">Shop fabrics &rarr;</a></div>
+    </div>
+    <div class="service">
+      <div class="service-name">Cutting &amp; Measuring</div>
+      <div class="service-desc">Rotary cutters, dress forms, measuring tapes, tailors chalk — precision tools for pattern work and alterations.</div>
+      <div style="margin-top:14px"><a href="https://www.amazon.com/s?k=sewing+cutting+tools" target="_blank" rel="noopener" style="font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);border-bottom:1px solid var(--pink-border);padding-bottom:2px">Shop tools &rarr;</a></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     TRANSITION BAND → NEH NEH
+══════════════════════════════════════ -->
+<div class="divide-band" id="nehneh">
+  <p>Also from Seamrite Designs</p>
+  <h3>Neh Neh</h3>
+</div>
+
+<!-- NEH NEH HERO -->
+<section class="nehneh-hero">
+  <div class="nehneh-bg-word">CULTURE</div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:1;text-align:center">
+    <div class="hero-eyebrow">Haute Couture · Art · </div>
+    <h1>Wear<br/><em>your</em><br/>culture.</h1>
+    <p class="nehneh-sub">Original paintings and handcrafted fashion rooted in the . Every piece made in  — made to last, made to be seen.</p>
+    <div class="hero-btns">
+      <a class="btn-pink" href="https://wa.me/18687910293?text=Hi%2C+I%27m+interested+in+Neh+Neh">Order a piece</a>
+      <a class="btn-outline" href="#gallery">View the gallery ↓</a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="sec-label">Our story</p>
+      <h2>Made in<br/><em>Trinidad.</em></h2>
+      <p>Seamrite Designs is a one-of-a-kind fashion studio based in Trinidad & Tobago. We create original acrylic paintings that celebrate  life — and we dress the people who live it.</p>
+      <p>From carnival costumes to bridal gowns, custom swimwear to school uniforms — every piece is made by hand with intention, pride, and a deep love for this island.</p>
+      <a class="btn-pink" href="https://wa.me/18687910293?text=Hi%2C+I%27m+interested+in+Neh+Neh" style="margin-top:8px;display:inline-block">Get in touch</a>
+    </div>
+    <div class="about-stats">
+      <div class="stat-row"><div class="stat-val">100%</div><div class="stat-label">Handmade to order</div></div>
+      <div class="stat-row"><div class="stat-val">TT</div><div class="stat-label">Made in T&T</div></div>
+      <div class="stat-row"><div class="stat-val">2018</div><div class="stat-label">Creating since</div></div>
+      <div class="stat-row"><div class="stat-val">∞</div><div class="stat-label">Ships worldwide</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- GALLERY -->
+<div class="gallery-section" id="gallery">
+  <div class="gallery-intro">
+    <p class="sec-label">Our Portfolio</p>
+    <h2> Our Work,<br/><em>straight from the studio.</em></h2>
+    <p style="font-size:0.88rem;color:rgba(245,230,240,0.42);line-height:1.8;font-weight:300">Every painting is an original acrylic on canvas — signed and dated. Available for purchase. Click any piece to enlarge.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item large" onclick="openLightbox('/nehneh/img/art6.jpg')">
+      <img src="/nehneh/img/art6.jpg" alt="Custom Carnival Costume" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">Carnival Costume</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('/nehneh/img/art3.jpg')">
+      <img src="/nehneh/img/art3.jpg" alt="Custom Evening Gown" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">Evening Gown</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('/nehneh/img/art1.jpg')">
+      <img src="/nehneh/img/art1.jpg" alt="Bridal Collection" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">Parrot Study, 2018</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('/nehneh/img/art4.jpg')">
+      <img src="/nehneh/img/art4.jpg" alt="Custom Swimwear" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">Custom Swimwear</span></div>
+    </div>
+    <div class="gallery-item large" onclick="openLightbox('/nehneh/img/art5.jpg')">
+      <img src="/nehneh/img/art5.jpg" alt="Festival Costume" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">Queen Conch, 2019</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('/nehneh/img/art2.jpg')">
+      <img src="/nehneh/img/art2.jpg" alt="Uniform Collection" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-caption">School Uniform</span></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px">
+    <a class="btn-pink" href="https://wa.me/18687910293?text=Hi%2C+I%27m+interested+in+purchasing+a+Neh+Neh+painting">Enquire about a painting</a>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- FASHION -->
+<div class="section" id="fashion">
+  <p class="sec-label">Fashion & Couture</p>
+  <h2>Dressed for<br/><em>every occasion.</em></h2>
+  <div class="pieces-grid">
+    <div class="piece">
+      <div class="piece-num">I</div>
+      <div class="piece-name">Wearable Art</div>
+      <div class="piece-desc">Statement pieces designed around  motifs — carnival, nature, heritage. Each one unique, each one a conversation.</div>
+      <div class="piece-tags"><span class="tag">Dresses</span><span class="tag">Costumes</span><span class="tag">Swimwear</span></div>
+    </div>
+    <div class="piece">
+      <div class="piece-num">II</div>
+      <div class="piece-name">Custom Orders</div>
+      <div class="piece-desc">Tell us your vision. We bring it to life — your measurements, your fabric, your story stitched into every seam.</div>
+      <div class="piece-tags"><span class="tag">Uniforms</span><span class="tag">Alterations</span><span class="tag">Bespoke</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- PROCESS -->
+<div class="section" id="process">
+  <p class="sec-label">How it works</p>
+  <h2>Simple.<br/><em>Personal.</em> Handcrafted.</h2>
+  <div class="process-strip">
+    <div class="process-row">
+      <div class="pr-num">01</div>
+      <div class="pr-body"><h3>Reach out on WhatsApp</h3><p>Tell us what you're looking for — a painting, a dress, a costume. No form, no fuss. Just a conversation.</p></div>
+    </div>
+    <div class="process-row">
+      <div class="pr-num">02</div>
+      <div class="pr-body"><h3>We design it together</h3><p>We'll work through the details — measurements, fabrics, colours, references. Everything tailored to you.</p></div>
+    </div>
+    <div class="process-row">
+      <div class="pr-num">03</div>
+      <div class="pr-body"><h3>Made by hand in </h3><p>Every piece is crafted by hand in Fyzabad. We don't rush it. Quality takes the time it takes.</p></div>
+    </div>
+    <div class="process-row">
+      <div class="pr-num">04</div>
+      <div class="pr-body"><h3>Delivered to you</h3><p>Local delivery or worldwide shipping. Your piece arrives carefully packaged — ready to wear, ready to display.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Ready to wear<br/>your culture?</h2>
+  <p>Message us on WhatsApp. We'll take it from there.</p>
+  <a class="btn-white" href="https://wa.me/18687910293?text=Hi%2C+I%27m+interested+in+Neh+Neh">Message on WhatsApp</a>
+</div>
+
+<footer>
+  <span class="foot-logo">Seamrite Designs</span>
+  <div class="foot-links">
+    <a href="#seamrite">Home</a>
+    <a href="#seamrite-services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#nehneh">Neh Neh</a>
+    <a href="https://www.instagram.com/seamritedesigns2023">Instagram</a>
+    <a href="newsletter/" style="color:#D4AF37;font-weight:700;">Newsletter</a>
+    <a href="https://wa.me/18687910293">WhatsApp</a>
+  </div>
+  <span class="foot-copy">© 2026 Seamrite Designs ·  & Tobago</span>
+
+<section style="background:#f8f8f8;padding:56px 24px;text-align:center;border-top:1px solid #e5e5e5;">
+  <div style="max-width:520px;margin:0 auto;">
+    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;opacity:0.6;">Stay Connected</p>
+    <h2 style="font-size:1.6rem;font-weight:600;margin-bottom:10px;">Get the Latest Updates</h2>
+    <p style="font-size:14px;opacity:0.7;margin-bottom:28px;line-height:1.7;">Exclusive content and updates straight to your inbox. No spam, unsubscribe any time.</p>
+    <form id="nl-form-main" action="https://formsubmit.co/ajax/hello@priscadezigns.org" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <input type="hidden" name="_subject" value="New Seamrite Designs subscriber">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" placeholder="your@email.com" required style="padding:12px 16px;border:1px solid #ddd;font-size:13px;min-width:220px;outline:none;flex:1;">
+      <button type="submit" style="background:#111;color:#fff;padding:12px 24px;border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;cursor:pointer;">Subscribe</button>
+    </form>
+    <div id="nl-success-msg" style="display:none;background:rgba(0,180,100,0.1);border:1px solid #00b464;padding:14px 20px;font-size:13px;margin-top:12px;border-radius:4px;">You are on the list. Thanks for subscribing!</div>
+  </div>
+</section>
+<script>
+(function(){
+  var form = document.getElementById('nl-form-main');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button');
+    if (btn) { btn.textContent = 'Subscribing...'; btn.disabled = true; }
+    fetch('https://formsubmit.co/ajax/hello@priscadezigns.org', {
+      method: 'POST', body: new FormData(form), headers: {'Accept':'application/json'}
+    })
+    .then(function() { form.style.display='none'; document.getElementById('nl-success-msg').style.display='block'; })
+    .catch(function() { form.style.display='none'; document.getElementById('nl-success-msg').style.display='block'; });
+  });
+})();
+</script>
+
+  <!-- Facebook Follow -->
+  <div style="text-align:center;padding:18px 0 8px;">
+    <a href="https://www.facebook.com/share/1BWZkieFXy/" target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:8px;background:#1877F2;color:#fff;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:0.05em;text-decoration:none;padding:10px 22px;border-radius:4px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close" onclick="closeLightbox()">×</span>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<script>
+var nav = document.getElementById('navbar');
+window.addEventListener('scroll', function(){
+  nav.className = window.scrollY > 50 ? 'scrolled' : '';
+});
+function openLightbox(src){
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
+</script>
+<script>
+
+(function(){
+  // theme disabled
+})();
+</script>
+<canvas id="sd-particles"></canvas><div id="sd-cursor-glow"></div><div id="sd-progress"></div><script>(function(){var prog=document.getElementById("sd-progress");var nav=document.getElementById("navbar");window.addEventListener("scroll",function(){var dH=document.documentElement.scrollHeight-window.innerHeight;if(prog)prog.style.width=(dH>0?(window.scrollY/dH)*100:0)+"%";if(nav)nav.classList.toggle("sd-scrolled",window.scrollY>50);});var glow=document.getElementById("sd-cursor-glow");if(glow){document.addEventListener("mousemove",function(e){glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px";});}var canvas=document.getElementById("sd-particles");if(canvas){var ctx=canvas.getContext("2d");var W,H,pts=[];function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}resize();window.addEventListener("resize",resize);for(var i=0;i<30;i++){pts.push({x:Math.random()*1200,y:Math.random()*800,size:Math.random()*1.5+0.4,sx:(Math.random()-.5)*.3,sy:(Math.random()-.5)*.3,op:Math.random()*.3+.05,col:Math.random()>.5?"#FF69B4":"#FF1493"});}function draw(){ctx.clearRect(0,0,W,H);pts.forEach(function(p){p.x+=p.sx;p.y+=p.sy;if(p.x<0||p.x>W)p.sx*=-1;if(p.y<0||p.y>H)p.sy*=-1;ctx.save();ctx.globalAlpha=p.op;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();ctx.restore();});requestAnimationFrame(draw);}draw();}var allR=[];["section > div","section > article",".product-card",".item-card",".lookbook-item",".grid-item"].forEach(function(sel){document.querySelectorAll(sel).forEach(function(el){if(!el.classList.contains("sd-reveal")&&!el.querySelector("canvas")){el.classList.add("sd-reveal");allR.push(el);}});});document.querySelectorAll("img").forEach(function(img){img.classList.add("sd-img-reveal");});var io=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){var idx=allR.indexOf(e.target);setTimeout(function(){e.target.classList.add("sd-visible");e.target.querySelectorAll("img.sd-img-reveal").forEach(function(img){img.classList.add("sd-visible");});},( idx%5)*90);io.unobserve(e.target);}});},{threshold:0.1});allR.forEach(function(el){io.observe(el);});document.querySelectorAll("img.sd-img-reveal").forEach(function(img){var imgObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("sd-visible");imgObs.unobserve(e.target);}});},{threshold:0.15});imgObs.observe(img);});})();</script>
+
+<script>
+/* Prisca Dezigns — Premium Scroll Animations v2 */
+(function(){
+  var sel = 'h2,h3,p.lead,[class*="card"],[class*="plan-"],[class*="feature-"],[class*="stat-"],[class*="service-"],[class*="benefit"],[class*="step-"],[class*="price-"],[class*="pkg"],[class*="brand-card"],[class*="app-card"]';
+  document.querySelectorAll(sel).forEach(function(el,i){
+    if(el.closest('nav')||el.closest('header')||el.closest('footer')) return;
+    el.classList.add('anim-ready');
+    el.style.animationDelay = (Math.min(i%5,4)*0.1)+'s';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('anim-visible');io.unobserve(e.target);}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.anim-ready').forEach(function(el){io.observe(el);});
+
+  /* Smooth counter */
+  document.querySelectorAll('[class*="stat-num"],[class*="counter-"]').forEach(function(el){
+    var raw = el.textContent.trim();
+    var num = parseInt(raw.replace(/[^0-9]/g,''));
+    if(!num) return;
+    var sfx = raw.replace(/[0-9,]/g,'');
+    var dur = 1400, start = null;
+    var io2 = new IntersectionObserver(function(es){
+      if(!es[0].isIntersecting) return;
+      io2.unobserve(el);
+      requestAnimationFrame(function step(ts){
+        if(!start) start=ts;
+        var p = Math.min((ts-start)/dur,1);
+        var e2 = 1-Math.pow(1-p,3);
+        el.textContent = Math.round(e2*num).toLocaleString()+sfx;
+        if(p<1) requestAnimationFrame(step);
+      });
+    },{threshold:0.5});
+    io2.observe(el);
+  });
+})();
+</script>
+
+<!-- === STANDARD FLOAT STACK === -->
+
+</div>
+
+
+
+<script>(function(){var b=document.getElementById('stdBackTop');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>400);},{passive:true});})();</script>
+
+<!-- Standard Float Stack -->
+<style>
+.std-float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform .2s}
+.std-float-wa:hover{transform:scale(1.08)}
+.std-float-wa svg{width:24px;height:24px;fill:#fff}
+.std-float-tr{position:fixed;bottom:84px;right:24px;z-index:9999;background:rgba(20,20,30,0.92);border:1px solid rgba(200,100,150,0.35);border-radius:25px;padding:5px 10px;backdrop-filter:blur(10px);cursor:pointer;border:none;font-size:.85rem;color:rgba(255,255,255,0.9)}
+.std-float-bt{position:fixed;bottom:148px;right:24px;z-index:9999;width:44px;height:44px;border-radius:50%;background:rgba(255,0,127,0.85);border:none;color:#fff;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.std-float-bt.visible{opacity:1;transform:translateY(0)}
+</style>
+
+<a href="https://wa.me/18687910293" target="_blank" rel="noopener" class="std-float-wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.417A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.274-1.244l-.306-.181-3.094.881.842-3.024-.198-.314A7.95 7.95 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+</a>
+
+<button id="translateBtn" class="std-float-tr" aria-label="Translate">&#127760;</button>
+
+
+
+
+<button class="std-float-bt" id="stdBackTop2" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8679;</button>
+<script>
+window.addEventListener('scroll',function(){
+  var btn=document.getElementById('stdBackTop2');
+  if(btn){btn.classList.toggle('visible',window.scrollY>400);}
+});
+</script>
+<!-- /Standard Float Stack -->
+
+<!-- PWA Install Prompt -->
+<div id="pwaInstallBanner" style="display:none;position:fixed;bottom:210px;right:24px;z-index:10000;background:linear-gradient(135deg,#0A0008,#1a0012);border:1px solid rgba(255,105,180,0.4);border-radius:18px;padding:16px 20px;max-width:300px;box-shadow:0 8px 32px rgba(255,20,147,0.25);backdrop-filter:blur(12px);">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+    <img src="/logos/seamritedesigns.jpg" style="width:40px;height:40px;border-radius:10px;object-fit:cover;" alt="Seamrite">
+    <div>
+      <div style="color:#FF69B4;font-weight:700;font-size:0.9rem;">Add to Home Screen</div>
+      <div style="color:#7A4060;font-size:0.75rem;">Install Seamrite Designs as an app</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;">
+    <button onclick="installPWA()" style="flex:1;background:linear-gradient(135deg,#FF1493,#FF69B4);color:#fff;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:0.85rem;cursor:pointer;">Install</button>
+    <button onclick="dismissPWA()" style="background:rgba(255,105,180,0.1);color:#FF69B4;border:1px solid rgba(255,105,180,0.3);border-radius:10px;padding:10px 14px;font-size:0.85rem;cursor:pointer;">Later</button>
+  </div>
+</div>
+
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (!localStorage.getItem('pwa-dismissed-seamrite')) {
+    setTimeout(() => { document.getElementById('pwaInstallBanner').style.display = 'block'; }, 3000);
+  }
+});
+function installPWA() {
+  document.getElementById('pwaInstallBanner').style.display = 'none';
+  if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(() => { deferredPrompt = null; }); }
+}
+function dismissPWA() {
+  document.getElementById('pwaInstallBanner').style.display = 'none';
+  localStorage.setItem('pwa-dismissed-seamrite', '1');
+}
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/seamritedesigns/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW error', e));
+  });
+}
+</script>
+
+
+
+<!-- ═══════ SIERRA CHATBOT — Seamrite Designs / Neh Neh ═══════ -->
+<style>
+.smrt-chat-fab{position:fixed;bottom:28px;left:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.smrt-chat-toggle{width:56px;height:56px;background:linear-gradient(135deg,#FF69B4,#FF1493);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(255,105,180,0.5);cursor:pointer;border:none;transition:transform 0.2s;animation:smrt-pulse 2.5s infinite;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@keyframes smrt-pulse{0%,100%{box-shadow:0 4px 20px rgba(255,105,180,0.5)}50%{box-shadow:0 4px 32px rgba(255,105,180,0.85)}}
+.smrt-chat-toggle:hover{transform:scale(1.08)}
+.smrt-chat-toggle svg{width:26px;height:26px;fill:#fff}
+.smrt-chat-window{width:310px;background:#0A0008;border:1px solid rgba(255,105,180,0.2);border-radius:16px;box-shadow:0 12px 48px rgba(0,0,0,0.6);overflow:hidden;display:none;flex-direction:column;max-height:430px}
+.smrt-chat-window.open{display:flex}
+.smrt-chat-head{background:linear-gradient(135deg,#1a0014,#0A0008);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,105,180,0.15)}
+.smrt-avatar{width:36px;height:36px;background:linear-gradient(135deg,#FF69B4,#FF1493);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:0.85rem;flex-shrink:0}
+.smrt-head-info h4{color:#fff;font-size:0.85rem;font-weight:700;margin-bottom:1px}
+.smrt-back-bar{display:none;align-items:center;gap:6px;padding:8px 14px;border-bottom:1px solid rgba(255,105,180,0.12);background:rgba(255,105,180,0.04);cursor:pointer;}
+.smrt-back-bar.vis{display:flex;}
+.smrt-back-bar span{font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,105,180,0.7);}
+.smrt-back-bar:hover span{color:#FF69B4;}
+.smrt-head-info p{color:rgba(255,105,180,0.6);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase}
+.smrt-online{width:7px;height:7px;background:#25D366;border-radius:50%;display:inline-block;margin-right:4px}
+.smrt-chat-body{flex:1;padding:14px;overflow-y:auto;background:#0D000A;display:flex;flex-direction:column;gap:9px}
+.smrt-msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:0.8rem;line-height:1.55}
+.smrt-msg.sierra{background:rgba(255,105,180,0.1);border:1px solid rgba(255,105,180,0.18);color:#F5E6F0;align-self:flex-start;border-bottom-left-radius:3px}
+.smrt-msg.user{background:linear-gradient(135deg,#FF69B4,#FF1493);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.smrt-quick{display:flex;flex-direction:column;gap:5px;align-self:flex-start;margin-top:2px}
+.smrt-qbtn{background:rgba(255,105,180,0.08);border:1px solid rgba(255,105,180,0.25);color:#FF69B4;padding:7px 13px;border-radius:20px;font-size:0.72rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-align:left;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.smrt-qbtn:hover{background:#FF69B4;color:#fff;border-color:#FF69B4}
+.smrt-input-row{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(255,105,180,0.12);background:#0A0008;align-items:center}
+.smrt-input{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,105,180,0.2);border-radius:20px;padding:9px 14px;font-size:0.8rem;color:#F5E6F0;outline:none}
+.smrt-input::placeholder{color:rgba(245,230,240,0.3)}
+.smrt-input:focus{border-color:#FF69B4}
+.smrt-send{background:linear-gradient(135deg,#FF69B4,#FF1493);color:#fff;border:none;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:transform 0.2s}
+.smrt-send:hover{transform:scale(1.1)}
+.smrt-wa-btn{display:inline-block;margin:5px 0;background:#25D366;color:#fff;padding:9px 16px;border-radius:20px;font-size:0.75rem;font-weight:700;text-decoration:none}
+</style>
+<div class="smrt-chat-fab">
+  <div class="smrt-chat-window" id="smrtChatWindow">
+    <div class="smrt-chat-head">
+      <div class="smrt-avatar" style="background:#0A0008;padding:2px;overflow:hidden;"><img src="/logos/seamritedesigns.jpg" alt="Seamrite" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+      <div class="smrt-head-info">
+        <h4>Seamrite Designs</h4>
+        <p><span class="smrt-online"></span>Online now</p>
+      </div>
+    </div>
+    <div class="smrt-back-bar" id="smrtBackBar" onclick="smrtGoBack()"><span>← Back</span></div>
+    <div class="smrt-chat-body" id="smrtChatBody">
+      <div class="smrt-msg sierra">✨ Hi! I'm the Seamrite Designs concierge. How can I help you today?</div>
+      <div class="smrt-quick">
+        <button class="smrt-qbtn" onclick="smrtQuick('I want a custom clothing piece')">👗 Custom clothing</button>
+        <button class="smrt-qbtn" onclick="smrtQuick('I want school uniforms')">🎓 School uniforms</button>
+        <button class="smrt-qbtn" onclick="smrtQuick('I want original artwork')">🎨 Original artwork</button>
+        <button class="smrt-qbtn" onclick="smrtQuick('How much does it cost?')">💬 Pricing info</button>
+      </div>
+    </div>
+    <div class="smrt-input-row">
+      <input class="smrt-input" id="smrtInput" type="text" placeholder="Message us..." onkeydown="if(event.key==='Enter')smrtSend()"/>
+      <button class="smrt-send" onclick="smrtSend()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+  <button class="smrt-chat-toggle" onclick="document.getElementById('smrtChatWindow').classList.toggle('open')" aria-label="Chat with Sierra" style="touch-action:manipulation">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var WA="18687910293";
+  var BASE="https://wa.me/"+WA+"?text=";
+  var smrtHist=[];
+  function smrtPush(){var b=document.getElementById('smrtChatBody');smrtHist.push({body:b.innerHTML,bv:document.getElementById('smrtBackBar').classList.contains('vis')});}
+  window.smrtGoBack=function(){if(!smrtHist.length)return;var p=smrtHist.pop();document.getElementById('smrtChatBody').innerHTML=p.body;document.getElementById('smrtBackBar').classList.toggle('vis',p.bv);};
+  function setBack(v){document.getElementById('smrtBackBar').classList.toggle('vis',v);}
+  var replies={
+    custom:["Alice specialises in bespoke custom clothing — from everyday wear to special occasion pieces. 🧵 What type of garment are you looking to create?","Custom pieces are Alice's passion! She works with you from concept to final fitting. Do you have a fabric, style, or occasion in mind?"],
+    uniform:["Seamrite Designs handles school uniforms for groups of all sizes! 🎓 Which school and how many uniforms do you need?","We do school uniforms with great quality and turnaround. Can you share the school name and quantity?"],
+    art:["Neh Neh features original Caribbean artwork — paintings, mixed media, and wearable art. 🎨 Are you looking for a wall piece or wearable art?","Alice's collection draws from Caribbean culture and architectural style. Would you like to know what's currently available?"],
+    price:["Pricing depends on the piece — custom garments start from consultation. Want Alice to send you a quote directly on WhatsApp?","Every piece is priced by fabric, complexity, and size. The fastest way to get a quote is to chat with Alice directly. Shall I connect you?"],
+    def:["Lovely! Let me connect you with Alice directly so she can give you all the details. 💕","Alice would love to help personally. I'll send you over to her WhatsApp now!"]
+  };
+  function getReply(m){
+    m=m.toLowerCase();
+    if(m.includes('custom')||m.includes('cloth')||m.includes('dress')||m.includes('outfit')||m.includes('sew'))return replies.custom[Math.floor(Math.random()*2)];
+    if(m.includes('uniform')||m.includes('school'))return replies.uniform[Math.floor(Math.random()*2)];
+    if(m.includes('art')||m.includes('paint')||m.includes('neh')||m.includes('canvas'))return replies.art[Math.floor(Math.random()*2)];
+    if(m.includes('price')||m.includes('cost')||m.includes('how much')||m.includes('rate'))return replies.price[Math.floor(Math.random()*2)];
+    return replies.def[Math.floor(Math.random()*2)];
+  }
+  function addMsg(t,c){var b=document.getElementById('smrtChatBody'),d=document.createElement('div');d.className='smrt-msg '+c;d.textContent=t;b.appendChild(d);b.scrollTop=b.scrollHeight;}
+  function addWA(pre){var b=document.getElementById('smrtChatBody'),a=document.createElement('a');a.href=BASE+encodeURIComponent("Hi Alice! Sierra connected me. "+(pre||"I'd like to learn more about Seamrite Designs."));a.target="_blank";a.className="smrt-wa-btn";a.textContent="📲 Message Alice on WhatsApp →";b.appendChild(a);b.scrollTop=b.scrollHeight;}
+  window.smrtSend=function(){var i=document.getElementById('smrtInput'),v=i.value.trim();if(!v)return;smrtPush();setBack(true);addMsg(v,'user');i.value='';document.querySelectorAll('.smrt-quick').forEach(function(el){el.remove();});setTimeout(function(){var r=getReply(v);addMsg(r,'sierra');if(r.includes('WhatsApp')||r.includes('Alice')||r.includes('connect')||r.includes('quote'))addWA(v);},650);};
+  window.smrtQuick=function(t){document.getElementById('smrtInput').value=t;smrtSend();};
+})();
+</script>
+
+<script>
+(function() {
+  var btn = document.getElementById("translateBtn");
+  if (!btn) return;
+  var existing = document.getElementById("translateDropdown");
+  if (existing) existing.remove();
+  var dropdown = document.createElement("div");
+  dropdown.id = "translateDropdown";
+  dropdown.style.cssText = "display:none;position:fixed;bottom:160px;right:24px;background:#fff;border:2px solid #333;z-index:99999;min-width:160px;box-shadow:0 4px 20px rgba(0,0,0,0.3);border-radius:10px;overflow:hidden;";
+  [["English","en"],["Español","es"],["Français","fr"],["Português","pt"],["Deutsch","de"],["日本語","ja"],["中文","zh-CN"],["العربية","ar"],["हिन्दी","hi"],["Русский","ru"]].forEach(function(l){
+    var a = document.createElement("a");
+    a.textContent = l[0];
+    a.href = "https://translate.google.com/translate?sl=en&tl="+l[1]+"&u="+encodeURIComponent(window.location.href);
+    a.target = "_blank"; a.rel = "noopener";
+    a.style.cssText = "display:block;padding:10px 16px;font-size:0.75rem;color:#0A0A0A;text-decoration:none;border-bottom:1px solid #eee;transition:background 0.2s;";
+    a.onmouseover = function(){ this.style.background="#FF69B4"; this.style.color="#fff"; };
+    a.onmouseout  = function(){ this.style.background=""; this.style.color="#0A0A0A"; };
+    dropdown.appendChild(a);
+  });
+  document.body.appendChild(dropdown);
+  btn.addEventListener("click", function(e){ e.stopPropagation(); dropdown.style.display = dropdown.style.display==="none" ? "block" : "none"; });
+  document.addEventListener("click", function(){ dropdown.style.display="none"; });
+})();
+</script>
+</body>
+</html>
+
+
+
+
