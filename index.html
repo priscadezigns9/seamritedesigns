@@ -584,41 +584,9 @@ img.sd-img-reveal.sd-visible{clip-path:inset(0 0% 0 0)}
     <a href="#gallery">Gallery</a>
     <a href="#nehneh">Neh Neh</a>
     <a href="https://www.instagram.com/seamritedesigns2023">Instagram</a>
-    <a href="newsletter/" style="color:#D4AF37;font-weight:700;">Newsletter</a>
     <a href="https://wa.me/18687910293">WhatsApp</a>
   </div>
   <span class="foot-copy">© 2026 Seamrite Designs ·  & Tobago</span>
-
-<section style="background:#f8f8f8;padding:56px 24px;text-align:center;border-top:1px solid #e5e5e5;">
-  <div style="max-width:520px;margin:0 auto;">
-    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;opacity:0.6;">Stay Connected</p>
-    <h2 style="font-size:1.6rem;font-weight:600;margin-bottom:10px;">Get the Latest Updates</h2>
-    <p style="font-size:14px;opacity:0.7;margin-bottom:28px;line-height:1.7;">Exclusive content and updates straight to your inbox. No spam, unsubscribe any time.</p>
-    <form id="nl-form-main" action="https://formsubmit.co/ajax/hello@priscadezigns.org" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-      <input type="hidden" name="_subject" value="New Seamrite Designs subscriber">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="email" name="email" placeholder="your@email.com" required style="padding:12px 16px;border:1px solid #ddd;font-size:13px;min-width:220px;outline:none;flex:1;">
-      <button type="submit" style="background:#111;color:#fff;padding:12px 24px;border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;cursor:pointer;">Subscribe</button>
-    </form>
-    <div id="nl-success-msg" style="display:none;background:rgba(0,180,100,0.1);border:1px solid #00b464;padding:14px 20px;font-size:13px;margin-top:12px;border-radius:4px;">You are on the list. Thanks for subscribing!</div>
-  </div>
-</section>
-<script>
-(function(){
-  var form = document.getElementById('nl-form-main');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var btn = form.querySelector('button');
-    if (btn) { btn.textContent = 'Subscribing...'; btn.disabled = true; }
-    fetch('https://formsubmit.co/ajax/hello@priscadezigns.org', {
-      method: 'POST', body: new FormData(form), headers: {'Accept':'application/json'}
-    })
-    .then(function() { form.style.display='none'; document.getElementById('nl-success-msg').style.display='block'; })
-    .catch(function() { form.style.display='none'; document.getElementById('nl-success-msg').style.display='block'; });
-  });
-})();
-</script>
 
   <!-- Facebook Follow -->
   <div style="text-align:center;padding:18px 0 8px;">
