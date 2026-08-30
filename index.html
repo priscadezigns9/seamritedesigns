@@ -760,99 +760,6 @@ if ('serviceWorker' in navigator) {
 
 
 
-<!-- ═══════ SIERRA CHATBOT — Seamrite Designs / Neh Neh ═══════ -->
-<style>
-.smrt-chat-fab{position:fixed;bottom:28px;left:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.smrt-chat-toggle{width:56px;height:56px;background:linear-gradient(135deg,#FF69B4,#FF1493);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(255,105,180,0.5);cursor:pointer;border:none;transition:transform 0.2s;animation:smrt-pulse 2.5s infinite;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-@keyframes smrt-pulse{0%,100%{box-shadow:0 4px 20px rgba(255,105,180,0.5)}50%{box-shadow:0 4px 32px rgba(255,105,180,0.85)}}
-.smrt-chat-toggle:hover{transform:scale(1.08)}
-.smrt-chat-toggle svg{width:26px;height:26px;fill:#fff}
-.smrt-chat-window{width:310px;background:#0A0008;border:1px solid rgba(255,105,180,0.2);border-radius:16px;box-shadow:0 12px 48px rgba(0,0,0,0.6);overflow:hidden;display:none;flex-direction:column;max-height:430px}
-.smrt-chat-window.open{display:flex}
-.smrt-chat-head{background:linear-gradient(135deg,#1a0014,#0A0008);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,105,180,0.15)}
-.smrt-avatar{width:36px;height:36px;background:linear-gradient(135deg,#FF69B4,#FF1493);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:0.85rem;flex-shrink:0}
-.smrt-head-info h4{color:#fff;font-size:0.85rem;font-weight:700;margin-bottom:1px}
-.smrt-back-bar{display:none;align-items:center;gap:6px;padding:8px 14px;border-bottom:1px solid rgba(255,105,180,0.12);background:rgba(255,105,180,0.04);cursor:pointer;}
-.smrt-back-bar.vis{display:flex;}
-.smrt-back-bar span{font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,105,180,0.7);}
-.smrt-back-bar:hover span{color:#FF69B4;}
-.smrt-head-info p{color:rgba(255,105,180,0.6);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase}
-.smrt-online{width:7px;height:7px;background:#25D366;border-radius:50%;display:inline-block;margin-right:4px}
-.smrt-chat-body{flex:1;padding:14px;overflow-y:auto;background:#0D000A;display:flex;flex-direction:column;gap:9px}
-.smrt-msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:0.8rem;line-height:1.55}
-.smrt-msg.sierra{background:rgba(255,105,180,0.1);border:1px solid rgba(255,105,180,0.18);color:#F5E6F0;align-self:flex-start;border-bottom-left-radius:3px}
-.smrt-msg.user{background:linear-gradient(135deg,#FF69B4,#FF1493);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
-.smrt-quick{display:flex;flex-direction:column;gap:5px;align-self:flex-start;margin-top:2px}
-.smrt-qbtn{background:rgba(255,105,180,0.08);border:1px solid rgba(255,105,180,0.25);color:#FF69B4;padding:7px 13px;border-radius:20px;font-size:0.72rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-align:left;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-.smrt-qbtn:hover{background:#FF69B4;color:#fff;border-color:#FF69B4}
-.smrt-input-row{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(255,105,180,0.12);background:#0A0008;align-items:center}
-.smrt-input{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,105,180,0.2);border-radius:20px;padding:9px 14px;font-size:0.8rem;color:#F5E6F0;outline:none}
-.smrt-input::placeholder{color:rgba(245,230,240,0.3)}
-.smrt-input:focus{border-color:#FF69B4}
-.smrt-send{background:linear-gradient(135deg,#FF69B4,#FF1493);color:#fff;border:none;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:transform 0.2s}
-.smrt-send:hover{transform:scale(1.1)}
-.smrt-wa-btn{display:inline-block;margin:5px 0;background:#25D366;color:#fff;padding:9px 16px;border-radius:20px;font-size:0.75rem;font-weight:700;text-decoration:none}
-</style>
-<div class="smrt-chat-fab">
-  <div class="smrt-chat-window" id="smrtChatWindow">
-    <div class="smrt-chat-head">
-      <div class="smrt-avatar" style="background:#0A0008;padding:2px;overflow:hidden;"><img src="https://priscadezigns.org/logos/seamritedesigns.jpg" alt="Seamrite" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-      <div class="smrt-head-info">
-        <h4>Seamrite Designs</h4>
-        <p><span class="smrt-online"></span>Online now</p>
-      </div>
-    </div>
-    <div class="smrt-back-bar" id="smrtBackBar" onclick="smrtGoBack()"><span>← Back</span></div>
-    <div class="smrt-chat-body" id="smrtChatBody">
-      <div class="smrt-msg sierra">✨ Hi! I'm the Seamrite Designs concierge. How can I help you today?</div>
-      <div class="smrt-quick">
-        <button class="smrt-qbtn" onclick="smrtQuick('I want a custom clothing piece')">👗 Custom clothing</button>
-        <button class="smrt-qbtn" onclick="smrtQuick('I want school uniforms')">🎓 School uniforms</button>
-        <button class="smrt-qbtn" onclick="smrtQuick('I want original artwork')">🎨 Original artwork</button>
-        <button class="smrt-qbtn" onclick="smrtQuick('How much does it cost?')">💬 Pricing info</button>
-      </div>
-    </div>
-    <div class="smrt-input-row">
-      <input class="smrt-input" id="smrtInput" type="text" placeholder="Message us..." onkeydown="if(event.key==='Enter')smrtSend()"/>
-      <button class="smrt-send" onclick="smrtSend()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
-  </div>
-  <button class="smrt-chat-toggle" onclick="document.getElementById('smrtChatWindow').classList.toggle('open')" aria-label="Chat with Sierra" style="touch-action:manipulation">
-    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-  </button>
-</div>
-<script>
-(function(){
-  var WA="18687910293";
-  var BASE="https://wa.me/"+WA+"?text=";
-  var smrtHist=[];
-  function smrtPush(){var b=document.getElementById('smrtChatBody');smrtHist.push({body:b.innerHTML,bv:document.getElementById('smrtBackBar').classList.contains('vis')});}
-  window.smrtGoBack=function(){if(!smrtHist.length)return;var p=smrtHist.pop();document.getElementById('smrtChatBody').innerHTML=p.body;document.getElementById('smrtBackBar').classList.toggle('vis',p.bv);};
-  function setBack(v){document.getElementById('smrtBackBar').classList.toggle('vis',v);}
-  var replies={
-    custom:["Alice specialises in bespoke custom clothing — from everyday wear to special occasion pieces. 🧵 What type of garment are you looking to create?","Custom pieces are Alice's passion! She works with you from concept to final fitting. Do you have a fabric, style, or occasion in mind?"],
-    uniform:["Seamrite Designs handles school uniforms for groups of all sizes! 🎓 Which school and how many uniforms do you need?","We do school uniforms with great quality and turnaround. Can you share the school name and quantity?"],
-    art:["Neh Neh features original Caribbean artwork — paintings, mixed media, and wearable art. 🎨 Are you looking for a wall piece or wearable art?","Alice's collection draws from Caribbean culture and architectural style. Would you like to know what's currently available?"],
-    price:["Pricing depends on the piece — custom garments start from consultation. Want Alice to send you a quote directly on WhatsApp?","Every piece is priced by fabric, complexity, and size. The fastest way to get a quote is to chat with Alice directly. Shall I connect you?"],
-    def:["Lovely! Let me connect you with Alice directly so she can give you all the details. 💕","Alice would love to help personally. I'll send you over to her WhatsApp now!"]
-  };
-  function getReply(m){
-    m=m.toLowerCase();
-    if(m.includes('custom')||m.includes('cloth')||m.includes('dress')||m.includes('outfit')||m.includes('sew'))return replies.custom[Math.floor(Math.random()*2)];
-    if(m.includes('uniform')||m.includes('school'))return replies.uniform[Math.floor(Math.random()*2)];
-    if(m.includes('art')||m.includes('paint')||m.includes('neh')||m.includes('canvas'))return replies.art[Math.floor(Math.random()*2)];
-    if(m.includes('price')||m.includes('cost')||m.includes('how much')||m.includes('rate'))return replies.price[Math.floor(Math.random()*2)];
-    return replies.def[Math.floor(Math.random()*2)];
-  }
-  function addMsg(t,c){var b=document.getElementById('smrtChatBody'),d=document.createElement('div');d.className='smrt-msg '+c;d.textContent=t;b.appendChild(d);b.scrollTop=b.scrollHeight;}
-  function addWA(pre){var b=document.getElementById('smrtChatBody'),a=document.createElement('a');a.href=BASE+encodeURIComponent("Hi Alice! Sierra connected me. "+(pre||"I'd like to learn more about Seamrite Designs."));a.target="_blank";a.className="smrt-wa-btn";a.textContent="📲 Message Alice on WhatsApp →";b.appendChild(a);b.scrollTop=b.scrollHeight;}
-  window.smrtSend=function(){var i=document.getElementById('smrtInput'),v=i.value.trim();if(!v)return;smrtPush();setBack(true);addMsg(v,'user');i.value='';document.querySelectorAll('.smrt-quick').forEach(function(el){el.remove();});setTimeout(function(){var r=getReply(v);addMsg(r,'sierra');if(r.includes('WhatsApp')||r.includes('Alice')||r.includes('connect')||r.includes('quote'))addWA(v);},650);};
-  window.smrtQuick=function(t){document.getElementById('smrtInput').value=t;smrtSend();};
-})();
-</script>
-
 <script>
 (function() {
   var btn = document.getElementById("translateBtn");
@@ -877,7 +784,7 @@ if ('serviceWorker' in navigator) {
   document.addEventListener("click", function(){ dropdown.style.display="none"; });
 })();
 </script>
-<script src="/chatbot.js"></script>
+
 </body>
 </html>
 
