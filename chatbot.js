@@ -57,69 +57,6 @@
     }
     #chat-voice-toggle.voice-on { background: #fff; color: var(--cb-purple); }
 
-    /* ── Agent Selector ── */
-    #agent-selector {
-        display:flex; flex-direction:column; align-items:center; justify-content:center;
-        padding:32px 24px; gap:16px; flex:1;
-    }
-    #agent-selector .sel-title {
-        font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em;
-        color:rgba(30,27,75,0.45); margin-bottom:4px;
-    }
-    .agent-sel-card {
-        width:100%; padding:18px 20px; border-radius:18px; border:1.5px solid rgba(255,20,147,0.15);
-        background:#fff; cursor:pointer; display:flex; align-items:center; gap:16px;
-        transition:all 0.2s; box-shadow:0 2px 12px rgba(255,20,147,0.06);
-    }
-    .agent-sel-card:hover { border-color:rgba(255,20,147,0.5); box-shadow:0 6px 24px rgba(255,20,147,0.14); transform:translateY(-2px); }
-    .agent-sel-card img { width:48px; height:48px; border-radius:14px; object-fit:cover; flex-shrink:0; }
-    .agent-sel-card .asc-name { font-size:1rem; font-weight:800; color:#1e1b4b; font-family:'Inter',sans-serif; }
-    .agent-sel-card .asc-role { font-size:0.78rem; color:rgba(30,27,75,0.55); margin-top:2px; font-weight:500; }
-
-    /* ── Switch Agent Button (header) ── */
-    #chat-switch-btn {
-        background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);
-        color:#fff; border-radius:12px; font-size:10px; font-weight:800; text-transform:uppercase;
-        padding:8px 12px; cursor:pointer; display:flex; align-items:center; gap:6px; transition:all 0.2s;
-        white-space:nowrap;
-    }
-    #chat-switch-btn:hover { background:rgba(255,255,255,0.25); }
-
-    /* ── Drew Vapi Panel ── */
-    #drew-panel {
-        display:none; flex-direction:column; align-items:center; justify-content:center;
-        flex:1; padding:32px 24px; gap:20px; text-align:center;
-    }
-    #drew-panel.active { display:flex; }
-    #drew-soundwave {
-        display:flex; align-items:flex-end; gap:4px; height:40px; justify-content:center;
-    }
-    #drew-soundwave span {
-        width:5px; border-radius:3px; background:linear-gradient(135deg,#9d50bb,#6e48aa);
-        height:8px; transition:height 0.15s;
-        animation:none;
-    }
-    #drew-soundwave.speaking span:nth-child(1){animation:drewWave 0.8s 0.0s infinite ease-in-out;}
-    #drew-soundwave.speaking span:nth-child(2){animation:drewWave 0.8s 0.1s infinite ease-in-out;}
-    #drew-soundwave.speaking span:nth-child(3){animation:drewWave 0.8s 0.2s infinite ease-in-out;}
-    #drew-soundwave.speaking span:nth-child(4){animation:drewWave 0.8s 0.15s infinite ease-in-out;}
-    #drew-soundwave.speaking span:nth-child(5){animation:drewWave 0.8s 0.05s infinite ease-in-out;}
-    @keyframes drewWave { 0%,100%{height:8px;} 50%{height:32px;} }
-    #drew-status { font-size:0.85rem; font-weight:600; color:rgba(30,27,75,0.6); font-family:'Inter',sans-serif; }
-    #drew-btn-start {
-        background:linear-gradient(135deg,#9d50bb,#6e48aa); color:#fff; border:none;
-        border-radius:50px; padding:14px 32px; font-size:0.9rem; font-weight:800;
-        font-family:'Inter',sans-serif; cursor:pointer; letter-spacing:0.04em;
-        box-shadow:0 8px 24px rgba(255,20,147,0.35); transition:all 0.2s;
-    }
-    #drew-btn-start:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(255,20,147,0.45); }
-    #drew-btn-end {
-        display:none; background:#fff; color:#ef4444; border:1.5px solid rgba(239,68,68,0.3);
-        border-radius:50px; padding:12px 28px; font-size:0.9rem; font-weight:800;
-        font-family:'Inter',sans-serif; cursor:pointer; letter-spacing:0.04em; transition:all 0.2s;
-    }
-    #drew-btn-end.visible { display:block; }
-
     #chat-back-bar { display:none; align-items:center; gap:10px; padding:12px 24px; border-bottom:1px solid rgba(0,0,0,0.03); background:rgba(255, 20, 147, 0.03); cursor:pointer; flex-shrink:0; }
     #chat-back-bar.vis { display:flex; }
     #chat-back-bar span { font-size:11px; font-weight:800; text-transform:uppercase; color:var(--cb-purple); letter-spacing: 0.05em; }
@@ -231,46 +168,11 @@
                 <div class="chat-hdr-status"><div class="chat-sdot"></div> Active Agent</div>
             </div>
             <div class="chat-hdr-right">
-                <button id="chat-switch-btn" onclick="switchAgent()" title="Switch Agent">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                    <span id="switch-btn-label">DREW</span>
-                </button>
                 <button id="chat-voice-toggle" onclick="toggleVoice()">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M11 5L6 9H2v6h4l5 4V5z"></path></svg>
                     AUDIO
                 </button>
             </div>
-        </div>
-        <!-- Agent Selector (shown on first open) -->
-        <div id="agent-selector">
-            <div class="sel-title">Who would you like to speak with?</div>
-            <div class="agent-sel-card" onclick="selectAgent('sierra')">
-                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/sierra_headshot.jpg" alt="Sierra" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
-                <div>
-                    <div class="asc-name">Sierra</div>
-                    <div class="asc-role">Customer Relations — Chat</div>
-                </div>
-            </div>
-            <div class="agent-sel-card" onclick="selectAgent('drew')">
-                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
-                <div>
-                    <div class="asc-name">Drew</div>
-                    <div class="asc-role">Sales Representative — Voice</div>
-                </div>
-            </div>
-        </div>
-        <!-- Drew Vapi Voice Panel -->
-        <div id="drew-panel">
-            <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" style="width:72px;height:72px;border-radius:20px;object-fit:cover;box-shadow:0 8px 24px rgba(255,20,147,0.25);" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
-            <div style="font-size:1.1rem;font-weight:800;color:#1e1b4b;font-family:'Inter',sans-serif;">Drew</div>
-            <div id="drew-soundwave"><span></span><span></span><span></span><span></span><span></span></div>
-            <div id="drew-status">Ready to connect</div>
-            <button id="drew-btn-start" onclick="drewStartCall()">🎙 Start Call</button>
-            <button id="drew-btn-end" onclick="drewEndCall()">End Call</button>
-            <button id="drew-btn-text" onclick="enterDrewText()" style="margin-top:10px;background:none;border:none;color:var(--cb-purple);font-weight:700;font-size:0.85rem;cursor:pointer;display:flex;align-items:center;gap:6px;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.5 8.5 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                Text Instead
-            </button>
         </div>
         <div id="chat-back-bar" onclick="chatBack()"><span>← Return</span></div>
         <div class="chat-msgs" id="chat-msgs"></div>
@@ -731,25 +633,19 @@ const STEPS = {
             { "l": "About Seamrite Designs", "s": "about", "i": "info" },
             { "l": "Neh Neh (Art & Culture)", "s": "nehneh", "i": "heart" },
             { "l": "Studio essentials", "s": "shop", "i": "package" },
-            { "l": "Talk to Drew about booking", "s": "__drew_text__", "i": "calendar" },
+            { "l": "Book a consultation", "s": "services", "i": "calendar" },
             { "l": "Talk to the team", "s": "talk", "i": "message-circle" }
         ]
     },
-    "drew_start": {
-        "bot": "Hey, I'm Drew \u2014 I help get your consultation booked. What are you looking to have made?",
+    "services": {
+        "bot": "Here's what we create, all made to measure \u2014 which one are you after?",
         "r": [
             { "l": "Custom Dresses", "s": "svc_dresses", "i": "scissors" },
             { "l": "Uniforms", "s": "svc_uniforms", "i": "users" },
             { "l": "Swimwear & Carnival", "s": "svc_swimwear", "i": "sun" },
             { "l": "Costumes", "s": "svc_costumes", "i": "star" },
             { "l": "Alterations", "s": "svc_alterations", "i": "scissors" },
-            { "l": "Bridal & Formal", "s": "svc_bridal", "i": "heart" }
-        ]
-    },
-    "services": {
-        "bot": "Here's what we create, all made to measure:\n\u2022 Custom Dresses\n\u2022 Uniforms (school, corporate, hospitality)\n\u2022 Swimwear & Carnival Costumes\n\u2022 Costumes (theatre, events)\n\u2022 Alterations\n\u2022 Bridal & Formal\n\nEvery piece is quoted individually \u2014 want to book a consultation for one of these?",
-        "r": [
-            { "l": "Yes, book a consultation", "s": "__drew_text__", "i": "calendar" },
+            { "l": "Bridal & Formal", "s": "svc_bridal", "i": "heart" },
             { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
@@ -787,7 +683,7 @@ const STEPS = {
     "nehneh": {
         "bot": "Neh Neh is our sister line \u2014 original acrylic paintings and handcrafted fashion rooted in Caribbean culture. Every piece is made in Trinidad, signed and dated, made to last and made to be seen.",
         "r": [
-            { "l": "I'm interested in a piece", "s": "__drew_text__", "i": "calendar" },
+            { "l": "I'm interested in a piece", "s": "talk", "i": "calendar" },
             { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
@@ -806,131 +702,14 @@ const STEPS = {
 let hist = [];
 let open = false;
 
-// ── Active agent: 'selector' | 'sierra' | 'drew'
-var activeAgent = 'selector';
-
-window.enterDrewText = function() {
-    activeAgent = 'drew';
-    var sel = document.getElementById('agent-selector');
-    var sierraUi = document.getElementById('chat-back-bar');
-    var msgs = document.getElementById('chat-msgs');
-    var qr = document.getElementById('chat-qr');
-    var inp = document.querySelector('.chat-inp-row');
-    var drewPanel = document.getElementById('drew-panel');
-    var hdrName = document.querySelector('.chat-hdr-name');
-    var hdrStatus = document.querySelector('.chat-hdr-status');
-    var switchLabel = document.getElementById('switch-btn-label');
-    var voiceBtn = document.getElementById('chat-voice-toggle');
-    var avatar = document.querySelector('.chat-avatar img');
-
-    if (sel) sel.style.display = 'none';
-    if (drewPanel) drewPanel.classList.remove('active');
-    // Stop any active Drew voice call before switching into text mode
-    if (typeof drewVapi !== 'undefined' && drewVapi && drewCallActive) drewVapi.stop();
-
-    if (sierraUi) sierraUi.style.display = '';
-    if (msgs) { msgs.style.display = ''; msgs.innerHTML = ''; }
-    if (qr) { qr.style.display = ''; qr.innerHTML = ''; }
-    if (inp) inp.style.display = '';
-    if (voiceBtn) voiceBtn.style.display = '';
-    if (hdrName) hdrName.textContent = 'Drew';
-    if (hdrStatus) hdrStatus.innerHTML = '<div class="chat-sdot"></div> Sales Representative';
-    if (switchLabel) switchLabel.textContent = 'SIERRA';
-    if (avatar) avatar.src = 'https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg';
-
-    // Reset history so Drew starts fresh at his own menu, regardless of
-    // whatever step Sierra's conversation was on.
-    hist.length = 0;
-    go('drew_start');
-}
-
-window.selectAgent = function(agent) {
-    activeAgent = agent;
-    var sel = document.getElementById('agent-selector');
-    var sierraUi = document.getElementById('chat-back-bar');
-    var msgs = document.getElementById('chat-msgs');
-    var qr = document.getElementById('chat-qr');
-    var inp = document.querySelector('.chat-inp-row');
-    var drewPanel = document.getElementById('drew-panel');
-    var hdrName = document.querySelector('.chat-hdr-name');
-    var hdrStatus = document.querySelector('.chat-hdr-status');
-    var switchLabel = document.getElementById('switch-btn-label');
-    var voiceBtn = document.getElementById('chat-voice-toggle');
-    var avatar = document.querySelector('.chat-avatar img');
-
-    if (sel) sel.style.display = 'none';
-
-    if (agent === 'sierra') {
-        if (drewPanel) drewPanel.classList.remove('active');
-        if (sierraUi) sierraUi.style.display = '';
-        if (msgs) msgs.style.display = '';
-        if (qr) qr.style.display = '';
-        if (inp) inp.style.display = '';
-        if (voiceBtn) voiceBtn.style.display = '';
-        if (hdrName) hdrName.textContent = 'Sierra';
-        if (hdrStatus) hdrStatus.innerHTML = '<div class="chat-sdot"></div> Active Agent';
-        if (switchLabel) switchLabel.textContent = 'DREW';
-        if (avatar) avatar.src = 'https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/sierra_headshot.jpg';
-        if (hist.length === 0) go('start');
-    } else if (agent === 'drew') {
-        if (sierraUi) sierraUi.style.display = 'none';
-        if (msgs) msgs.style.display = 'none';
-        if (qr) qr.style.display = 'none';
-        if (inp) inp.style.display = 'none';
-        if (voiceBtn) voiceBtn.style.display = 'none';
-        if (drewPanel) drewPanel.classList.add('active');
-        if (hdrName) hdrName.textContent = 'Drew';
-        if (hdrStatus) hdrStatus.innerHTML = '<div class="chat-sdot"></div> Sales Representative';
-        if (switchLabel) switchLabel.textContent = 'SIERRA';
-        if (avatar) avatar.src = 'https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg';
-        drewInitVapi();
-    }
-};
-
-window.switchAgent = function() {
-    // If on selector screen, do nothing
-    if (activeAgent === 'selector') return;
-    // Stop any active Drew call before switching
-    if (activeAgent === 'drew' && drewVapi && drewCallActive) drewVapi.stop();
-    // Show selector again to let user pick
-    var sel = document.getElementById('agent-selector');
-    var sierraUi = document.getElementById('chat-back-bar');
-    var msgs = document.getElementById('chat-msgs');
-    var qr = document.getElementById('chat-qr');
-    var inp = document.querySelector('.chat-inp-row');
-    var drewPanel = document.getElementById('drew-panel');
-    var voiceBtn = document.getElementById('chat-voice-toggle');
-    if (sel) sel.style.display = '';
-    if (sierraUi) sierraUi.style.display = 'none';
-    if (msgs) msgs.style.display = 'none';
-    if (qr) qr.style.display = 'none';
-    if (inp) inp.style.display = 'none';
-    if (drewPanel) drewPanel.classList.remove('active');
-    if (voiceBtn) voiceBtn.style.display = 'none';
-    activeAgent = 'selector';
-};
-
 window.toggleChat = function(){
     open = !open;
     document.getElementById('pd-chat-window').classList.toggle('open', open);
     document.getElementById('pd-chat-bubble').classList.toggle('open', open);
-    if (open && activeAgent === 'selector') {
-        // Show selector — hide sierra/drew UI elements until agent chosen
-        var sierraUi = document.getElementById('chat-back-bar');
-        var msgs = document.getElementById('chat-msgs');
-        var qr = document.getElementById('chat-qr');
-        var inp = document.querySelector('.chat-inp-row');
-        var voiceBtn = document.getElementById('chat-voice-toggle');
-        if (sierraUi) sierraUi.style.display = 'none';
-        if (msgs) msgs.style.display = 'none';
-        if (qr) qr.style.display = 'none';
-        if (inp) inp.style.display = 'none';
-        if (voiceBtn) voiceBtn.style.display = 'none';
-    }
+    if (open && hist.length === 0 && !document.getElementById('chat-msgs').children.length) go('start');
 };
 
 window.go = function(step, label){
-    if (step === '__drew_text__') { enterDrewText(); return; }
     const s = STEPS[step];
     if(!s) return;
     if(label) addMsg(label, 'usr');
@@ -1159,96 +938,6 @@ if (window.location.search.includes('voicepicker=1')) {
         buildVoicePicker();
     }
 }
-
-// ── Drew Vapi Integration ──
-var drewVapi = null;
-var drewCallActive = false;
-var DREW_ASSISTANT_ID = 'ddf9f69d-bc14-4909-b057-a8736ef43990';
-var VAPI_PUBKEY = 'f310f375-edec-472f-bfb6-ba5992ff623a';
-
-function drewSetStatus(txt) {
-    var el = document.getElementById('drew-status');
-    if (el) el.textContent = txt;
-}
-function drewSetCallUI(active) {
-    var sw = document.getElementById('drew-soundwave');
-    var btnStart = document.getElementById('drew-btn-start');
-    var btnEnd = document.getElementById('drew-btn-end');
-    if (sw) sw.classList.toggle('speaking', active);
-    if (btnStart) btnStart.style.display = active ? 'none' : '';
-    if (btnEnd) btnEnd.classList.toggle('visible', active);
-}
-
-function drewInitVapi() {
-    if (drewVapi) return;
-    // Dynamically load Vapi SDK as ESM module
-    var script = document.createElement('script');
-    script.type = 'module';
-    script.textContent = `
-        import Vapi from 'https://esm.sh/@vapi-ai/web@2.6.1';
-        var v = new Vapi('${VAPI_PUBKEY}');
-        window.__drewVapiInstance = v;
-        v.on('call-start', function() {
-            drewCallActive = true;
-            window.drewSetStatus('Connected — Drew is live!');
-            window.drewSetCallUI(true);
-        });
-        v.on('call-end', function() {
-            drewCallActive = false;
-            window.drewSetStatus('Call ended');
-            window.drewSetCallUI(false);
-            var btn = document.getElementById('drew-btn-start');
-            if (btn) btn.textContent = '🎙 Call Again';
-        });
-        v.on('error', function(e) {
-            window.drewSetStatus('Connection error — please try again');
-            window.drewSetCallUI(false);
-            console.error('Drew VAPI error:', e);
-        });
-        v.on('speech-start', function() {
-            var sw = document.getElementById('drew-soundwave');
-            if (sw) sw.classList.add('speaking');
-        });
-        v.on('speech-end', function() {
-            var sw = document.getElementById('drew-soundwave');
-            if (sw) sw.classList.remove('speaking');
-        });
-        drewVapi = v;
-    `;
-    document.head.appendChild(script);
-    // expose helpers globally for the inline ESM to call back
-    window.drewSetStatus = drewSetStatus;
-    window.drewSetCallUI = drewSetCallUI;
-    drewSetStatus('Initialising…');
-    // Give SDK ~1.5s to load then update status
-    setTimeout(function() {
-        if (!drewCallActive) drewSetStatus('Ready to connect');
-    }, 1500);
-}
-
-window.drewStartCall = function() {
-    if (!window.__drewVapiInstance) {
-        drewSetStatus('Still loading — please wait a moment…');
-        return;
-    }
-    drewVapi = window.__drewVapiInstance;
-    drewSetStatus('Connecting…');
-    drewVapi.start(DREW_ASSISTANT_ID);
-};
-
-window.drewEndCall = function() {
-    if (window.__drewVapiInstance && drewCallActive) {
-        window.__drewVapiInstance.stop();
-    }
-};
-
-// ── Zapia Executive Tag ──
-// Timestamp: 2026-07-21 01:20:00 AST
-// Author: Zapia Executive
-// Change: Added Sierra / Drew agent selector on chatbot open.
-//         Drew routes to Vapi assistant ddf9f69d (Sales Rep).
-//         Sierra retains all existing behaviour unchanged.
-//         Switch button in header lets user toggle between agents.
 
 })();
 
