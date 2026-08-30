@@ -7,22 +7,22 @@
         s.id = 'pd-chat-style';
         s.innerHTML = `
     :root {
-        --cb-purple: #9d50bb;
-        --cb-deep: #6e48aa;
-        --cb-bg: rgba(255, 255, 255, 0.98);
-        --cb-text: #1e1b4b;
+        --cb-purple: #FF1493;
+        --cb-deep: #FF69B4;
+        --cb-bg: rgba(10, 0, 8, 0.97);
+        --cb-text: #FFFFFF;
     }
     
     #pd-chat-bubble {
         position:fixed; bottom:28px; right:28px; z-index:9999;
         width:64px; height:64px; border-radius:24px;
         background: linear-gradient(135deg, var(--cb-purple), var(--cb-deep));
-        box-shadow: 0 12px 40px rgba(157, 80, 187, 0.4);
+        box-shadow: 0 12px 40px rgba(255, 20, 147, 0.4);
         cursor:pointer; display:flex; align-items:center; justify-content:center;
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         animation: bubbleFloat 3s ease-in-out infinite;
     }
-    #pd-chat-bubble:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 50px rgba(157, 80, 187, 0.6); }
+    #pd-chat-bubble:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 50px rgba(255, 20, 147, 0.6); }
     #pd-chat-bubble.open { transform: scale(0.9) rotate(90deg); background: #1e1b4b; }
     #pd-chat-bubble .chat-x { display:none; color:#fff; font-size:24px; font-weight:300; }
     #pd-chat-bubble.open .chat-x { display:block; }
@@ -31,7 +31,7 @@
     #pd-chat-window {
         position:fixed; bottom:108px; right:28px; z-index:9998;
         width:420px; background: var(--cb-bg); backdrop-filter: blur(20px);
-        border: 1px solid rgba(157, 80, 187, 0.1);
+        border: 1px solid rgba(255, 20, 147, 0.1);
         box-shadow: 0 30px 90px rgba(30, 27, 75, 0.2);
         display:flex; flex-direction:column;
         opacity:0; pointer-events:none; transform:translateY(30px) scale(0.95);
@@ -67,11 +67,11 @@
         color:rgba(30,27,75,0.45); margin-bottom:4px;
     }
     .agent-sel-card {
-        width:100%; padding:18px 20px; border-radius:18px; border:1.5px solid rgba(157,80,187,0.15);
+        width:100%; padding:18px 20px; border-radius:18px; border:1.5px solid rgba(255,20,147,0.15);
         background:#fff; cursor:pointer; display:flex; align-items:center; gap:16px;
-        transition:all 0.2s; box-shadow:0 2px 12px rgba(157,80,187,0.06);
+        transition:all 0.2s; box-shadow:0 2px 12px rgba(255,20,147,0.06);
     }
-    .agent-sel-card:hover { border-color:rgba(157,80,187,0.5); box-shadow:0 6px 24px rgba(157,80,187,0.14); transform:translateY(-2px); }
+    .agent-sel-card:hover { border-color:rgba(255,20,147,0.5); box-shadow:0 6px 24px rgba(255,20,147,0.14); transform:translateY(-2px); }
     .agent-sel-card img { width:48px; height:48px; border-radius:14px; object-fit:cover; flex-shrink:0; }
     .agent-sel-card .asc-name { font-size:1rem; font-weight:800; color:#1e1b4b; font-family:'Inter',sans-serif; }
     .agent-sel-card .asc-role { font-size:0.78rem; color:rgba(30,27,75,0.55); margin-top:2px; font-weight:500; }
@@ -110,9 +110,9 @@
         background:linear-gradient(135deg,#9d50bb,#6e48aa); color:#fff; border:none;
         border-radius:50px; padding:14px 32px; font-size:0.9rem; font-weight:800;
         font-family:'Inter',sans-serif; cursor:pointer; letter-spacing:0.04em;
-        box-shadow:0 8px 24px rgba(157,80,187,0.35); transition:all 0.2s;
+        box-shadow:0 8px 24px rgba(255,20,147,0.35); transition:all 0.2s;
     }
-    #drew-btn-start:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(157,80,187,0.45); }
+    #drew-btn-start:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(255,20,147,0.45); }
     #drew-btn-end {
         display:none; background:#fff; color:#ef4444; border:1.5px solid rgba(239,68,68,0.3);
         border-radius:50px; padding:12px 28px; font-size:0.9rem; font-weight:800;
@@ -120,17 +120,17 @@
     }
     #drew-btn-end.visible { display:block; }
 
-    #chat-back-bar { display:none; align-items:center; gap:10px; padding:12px 24px; border-bottom:1px solid rgba(0,0,0,0.03); background:rgba(157, 80, 187, 0.03); cursor:pointer; flex-shrink:0; }
+    #chat-back-bar { display:none; align-items:center; gap:10px; padding:12px 24px; border-bottom:1px solid rgba(0,0,0,0.03); background:rgba(255, 20, 147, 0.03); cursor:pointer; flex-shrink:0; }
     #chat-back-bar.vis { display:flex; }
     #chat-back-bar span { font-size:11px; font-weight:800; text-transform:uppercase; color:var(--cb-purple); letter-spacing: 0.05em; }
     
     .chat-msgs { flex:1; overflow-y:auto; padding:28px; display:flex; flex-direction:column; gap:16px; min-height:60px; max-height:480px; -webkit-overflow-scrolling: touch; }
     .chat-msgs::-webkit-scrollbar { width:4px; }
-    .chat-msgs::-webkit-scrollbar-thumb { background: rgba(157, 80, 187, 0.1); border-radius:10px; }
+    .chat-msgs::-webkit-scrollbar-thumb { background: rgba(255, 20, 147, 0.1); border-radius:10px; }
     
     .cmsg { max-width:85%; font-size:0.95rem; line-height:1.6; padding:14px 20px; border-radius:24px; font-family: 'Inter', sans-serif; position: relative; }
-    .cmsg.bot { background:#f3f4f6; color: var(--cb-text); align-self:flex-start; border-bottom-left-radius: 4px; }
-    .cmsg.usr { background: var(--cb-purple); color:#fff; align-self:flex-end; border-bottom-right-radius: 4px; box-shadow: 0 4px 15px rgba(157, 80, 187, 0.2); font-weight: 500; }
+    .cmsg.bot { background:#1A0A14; color: var(--cb-text); align-self:flex-start; border-bottom-left-radius: 4px; border: 1px solid rgba(255,255,255,0.06); }
+    .cmsg.usr { background: var(--cb-purple); color:#fff; align-self:flex-end; border-bottom-right-radius: 4px; box-shadow: 0 4px 15px rgba(255, 20, 147, 0.2); font-weight: 500; }
     
     /* Media/Link Style */
     .cmsg a { color: inherit; text-decoration: underline; font-weight: 700; }
@@ -144,7 +144,7 @@
     .cmsg.bot .vp-btn { background: var(--cb-purple); color: #fff; }
     .vp-track { flex: 1; height: 3px; border-radius: 3px; cursor: pointer; position: relative; }
     .cmsg.usr .vp-track { background: rgba(255,255,255,0.28); }
-    .cmsg.bot .vp-track { background: rgba(157, 80, 187, 0.18); }
+    .cmsg.bot .vp-track { background: rgba(255, 20, 147, 0.18); }
     .vp-fill { height: 100%; border-radius: 3px; width: 0%; pointer-events: none; }
     .cmsg.usr .vp-fill { background: #fff; }
     .cmsg.bot .vp-fill { background: var(--cb-purple); }
@@ -160,20 +160,20 @@
 
     .chat-qr { padding:0 28px 24px; display:flex; flex-wrap:wrap; gap:8px; flex-shrink:0; }
     .qrb { 
-        font-size:0.76rem; font-weight:600; padding:9px 14px; border:1px solid rgba(157, 80, 187, 0.2); 
-        background:#fff; cursor:pointer; color:var(--cb-purple); border-radius:14px; 
-        transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        font-size:0.76rem; font-weight:600; padding:9px 14px; border:1px solid rgba(255, 20, 147, 0.2); 
+        background:#150A10; cursor:pointer; color:var(--cb-purple); border-radius:14px; 
+        transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.2); border-color: rgba(255, 20, 147, 0.25);
         font-family: 'Inter', sans-serif;
         display: flex; align-items: center; gap: 7px;
         flex-shrink: 0;
     }
     .qrb svg { width: 14px; height: 14px; flex-shrink: 0; stroke-width: 2.5; }
-    .qrb:hover { background:var(--cb-purple); color:#fff; border-color:var(--cb-purple); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(157, 80, 187, 0.2); }
+    .qrb:hover { background:var(--cb-purple); color:#fff; border-color:var(--cb-purple); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255, 20, 147, 0.2); }
     .qrb.wa { background: #22c55e; color:#fff; border-color:#22c55e; display:inline-flex; align-items:center; gap:8px; }
     
-    .chat-inp-row { display:flex; border-top:1px solid rgba(0,0,0,0.05); padding:10px 12px; background:#fff; align-items:center; gap:4px; position: relative; }
-    #chat-inp { flex:1; min-width:0; border:none; background:#f3f4f6; padding:10px 14px; font-size:0.9rem; border-radius:14px; outline:none; transition: all 0.2s; font-family: 'Inter', sans-serif; }
-    #chat-inp:focus { background: #fff; box-shadow: inset 0 0 0 2px rgba(157, 80, 187, 0.1); }
+    .chat-inp-row { display:flex; border-top:1px solid rgba(255,255,255,0.06); padding:10px 12px; background:#150A10; align-items:center; gap:4px; position: relative; }
+    #chat-inp { flex:1; min-width:0; border:none; background:#1A0A14; color:#fff; padding:10px 14px; font-size:0.9rem; border-radius:14px; outline:none; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+    #chat-inp:focus { background: #1A0A14; box-shadow: inset 0 0 0 2px rgba(255, 20, 147, 0.25); }
     
     .chat-tool-btn { 
         width:36px; height:36px; display:flex; align-items:center; justify-content:center; 
@@ -200,8 +200,8 @@
     @keyframes cbPulse { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
 
     .cpkg-grid { display:flex; flex-direction:column; gap:12px; width:100%; align-self:stretch; }
-    .cpkg-card { background:#fff; border:1px solid rgba(157, 80, 187, 0.1); padding:20px; cursor:pointer; transition:all 0.3s; border-radius:20px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .cpkg-card:hover { border-color:var(--cb-purple); background:rgba(157, 80, 187, 0.02); transform: translateY(-3px); box-shadow: 0 12px 24px rgba(157, 80, 187, 0.08); }
+    .cpkg-card { background:#150A10; border:1px solid rgba(255, 20, 147, 0.15); padding:20px; cursor:pointer; transition:all 0.3s; border-radius:20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .cpkg-card:hover { border-color:var(--cb-purple); background:rgba(255, 20, 147, 0.02); transform: translateY(-3px); box-shadow: 0 12px 24px rgba(255, 20, 147, 0.08); }
     .cpkg-name { font-size:1rem; font-weight:800; color:var(--cb-purple); letter-spacing:-0.01em; }
     .cpkg-price { font-size:0.85rem; font-weight:700; color:#64748b; margin-top:4px; }
     .cpkg-desc { font-size:0.85rem; color:#475569; margin-top:12px; line-height:1.6; }
@@ -224,7 +224,7 @@
     <div id="pd-chat-window">
         <div class="chat-hdr">
             <div class="chat-avatar">
-                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/PRISCA_ICON_LOGO_tight.png" alt="P">
+                <img src="https://priscadezigns.org/logos/seamritedesigns.jpg" alt="Seamrite Designs">
             </div>
             <div style="flex:1">
                 <div class="chat-hdr-name">Sierra</div>
@@ -245,14 +245,14 @@
         <div id="agent-selector">
             <div class="sel-title">Who would you like to speak with?</div>
             <div class="agent-sel-card" onclick="selectAgent('sierra')">
-                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/sierra_headshot.jpg" alt="Sierra" onerror="this.src='https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/PRISCA_ICON_LOGO_tight.png'">
+                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/sierra_headshot.jpg" alt="Sierra" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
                 <div>
                     <div class="asc-name">Sierra</div>
                     <div class="asc-role">Customer Relations — Chat</div>
                 </div>
             </div>
             <div class="agent-sel-card" onclick="selectAgent('drew')">
-                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" onerror="this.src='https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/PRISCA_ICON_LOGO_tight.png'">
+                <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
                 <div>
                     <div class="asc-name">Drew</div>
                     <div class="asc-role">Sales Representative — Voice</div>
@@ -261,7 +261,7 @@
         </div>
         <!-- Drew Vapi Voice Panel -->
         <div id="drew-panel">
-            <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" style="width:72px;height:72px;border-radius:20px;object-fit:cover;box-shadow:0 8px 24px rgba(157,80,187,0.25);" onerror="this.src='https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/logos/PRISCA_ICON_LOGO_tight.png'">
+            <img src="https://raw.githubusercontent.com/priscadezigns9/priscadezignswebsite/main/assets/drew_headshot.jpg" alt="Drew" style="width:72px;height:72px;border-radius:20px;object-fit:cover;box-shadow:0 8px 24px rgba(255,20,147,0.25);" onerror="this.src='https://priscadezigns.org/logos/seamritedesigns.jpg'">
             <div style="font-size:1.1rem;font-weight:800;color:#1e1b4b;font-family:'Inter',sans-serif;">Drew</div>
             <div id="drew-soundwave"><span></span><span></span><span></span><span></span><span></span></div>
             <div id="drew-status">Ready to connect</div>
@@ -295,51 +295,6 @@
         </div>
     </div>`;
         document.body.appendChild(c);
-    // ── Persistent Guidance Buttons ──
-    if(!document.getElementById('pd-roadmap-bar')){
-        const r = document.createElement('div');
-        r.id = 'pd-roadmap-bar';
-        r.style = 'padding:0 28px 12px; display:flex; flex-wrap:wrap; gap:10px; flex-shrink:0;';
-        r.innerHTML = `
-            <style>
-                #pd-roadmap-bar::-webkit-scrollbar { display:none; }
-                .road-btn { 
-                    font-size:0.76rem; font-weight:600; padding:9px 14px; border:1px solid rgba(157, 80, 187, 0.2); 
-                    background:#fff; cursor:pointer; color:var(--cb-purple); border-radius:14px; 
-                    transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-                    font-family: 'Inter', sans-serif;
-                    display: flex; align-items: center; gap: 7px;
-                    flex-shrink: 0;
-                }
-                .road-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-                .road-btn:hover { background:var(--cb-purple); color:#fff; border-color:var(--cb-purple); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(157, 80, 187, 0.2); }
-                @media (max-width: 520px) {
-                    #pd-roadmap-bar { padding-left:16px !important; padding-right:16px !important; gap:6px !important; }
-                    .road-btn { font-size:0.72rem; padding:9px 12px; gap:5px; border-radius:12px; }
-                    .road-btn svg { width:13px; height:13px; }
-                }
-                @media (max-width: 340px) {
-                    #pd-roadmap-bar { padding-left:10px !important; padding-right:10px !important; gap:4px !important; }
-                    .road-btn { font-size:0.64rem; padding:8px 9px; gap:4px; }
-                    .road-btn svg { width:12px; height:12px; }
-                }
-            </style>
-            <button class="road-btn" onclick="window.open('https://driveevolve.com', '_blank')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6"/></svg>
-                <span>Evolve</span>
-            </button>
-            <button class="road-btn" onclick="window.open('https://thewaymadeknown.com', '_blank')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                <span>TWMK</span>
-            </button>
-            <button class="road-btn" onclick="window.open('https://priscadezigns.org/audit/', '_blank')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>
-                <span>Request Audit</span>
-            </button>
-        `;
-        const msgs = document.getElementById('chat-msgs');
-        msgs.parentNode.insertBefore(r, document.querySelector('.chat-inp-row'));
-    }
 
         
         // Populate Emojis
@@ -358,11 +313,11 @@
         });
     }
 
-const WA="https://wa.me/18683424101";
+const WA="https://wa.me/18687910293";
 const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhemhkbnF6YXFwcWNyYWxtdGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxNzE5NjYsImV4cCI6MjA5Mzc0Nzk2Nn0.uTyw31uWTNOTV5-HzNpm46vpAJABAsHLMzW-sYOkRhc";
 const SB_URL = "https://sazhdnqzaqpqcralmthh.supabase.co";
 
-const SYSTEM_PROMPT = "Your name is Sierra. You are the Prisca Dezigns AI assistant — the sales and support agent for Prisca Dezigns, a premium digital agency based in Trinidad & Tobago. If a user asks your name, or greets you by name, or asks what you are, tell them you're Sierra. You are also literally the AI Employee behind the 'AI Customer Relations' department listed under AI Employees on this site -- if someone asks what AI Customer Relations does, you can honestly say 'that's me' and describe yourself.\n\nYour personality: warm, professional, sharp, and conversational. You speak like a knowledgeable friend who happens to be a web design expert — never robotic, never generic, never pushy. Keep replies concise (2–4 sentences max unless detail is needed). Always ask a follow-up question to keep the conversation moving.\n\nATTACHMENT HANDLING:\nYou DO accept documents and files -- there is a paperclip/attach button in the chat for exactly this. When a user asks to send a document, image, or file, tell them to use the attach button, never say you lack the capability to receive files. When a user uploads an image, you will receive it as actual image content you can see — describe or respond to what is genuinely in it. When a user uploads a voice note, you will only receive a text transcript if one was successfully captured; if a message tells you no transcript is available, say so honestly and ask the user to type their question instead. When a user uploads a general file/document, it has already been saved securely and logged for the team -- confirm this to the user and ask what they need next, rather than saying you cannot handle it. Never claim to have heard or seen something you were not actually given.\n\nABOUT PRISCA DEZIGNS:\nPrisca Dezigns is an enterprise AI and digital transformation partner based in Trinidad & Tobago, founded by Priscilla Narine. The agency combines high-fidelity websites, AI automation (chatbots, WhatsApp automation, email automation, voice agents, lead qualification and routing), and brand architecture — helping businesses modernize how they operate, not just how they look online. Every project is professionally built — no drag-and-drop builders. Clients provide content; the team handles everything else.\n\nBRAND IDENTITY:\nPrisca Dezigns' primary brand color is a rich purple (#7c3aed), paired with a warm ivory/cream background (#FFFFF0). If asked about the brand's colors, favorite color, or visual identity, answer directly and confidently using this — purple is the signature color across the website, logo, and all client-facing materials.\n\nSERVICES & PRICING (always quote these exact figures):\n- 1-Day Custom Site: $200 setup + $50/mo maintenance (Live in 24hrs). Includes 1 revision. Any additional add-on is $50 USD each.\n- Custom Web Packages: Starter ($297), Growth ($597), Trusted ($1,200), Custom (Bespoke)\n- E-Commerce: E-Starter ($497), E-Growth ($1,497), E-Trusted ($2,500) -- setup fee only, no separate monthly hosting fee\n- Maintenance: $99/mo -- monthly updates, security monitoring, performance checks, 1 content edit/mo, priority support (E-Commerce Maintenance: $199.99/mo)\n- Template Site: $149.99 + $19.99/mo · Micro Store: $249.99 + $34.99/mo · Agency & Artist (Premium 3D): $299.99 + $19.99/mo\n- Template Add-Ons: Copywriting ($49.99 + $4.99/update) · AI Chatbot ($349.99 + $49.99/mo)\n- Voice Agents: Starting at $8,000 setup + $900/mo (Add-on: $500 setup + $50/mo)\n- AI Consultancy at Prisca Dezigns covers two umbrellas -- AI Employees and AI Voice -- each with its own dedicated pricing page:\n  - AI EMPLOYEES (/aidata/) -- Starter (From $1,250 + $599/mo), Growth (From $2,000 + $899/mo), Enterprise (From $4,000 + $1,499/mo). This was previously called 'AI Data' -- if a user says 'AI Data', they mean this. AI Employees is organised into 9 departments (NOT a flat product, each is its own entry on the homepage globe navigation), and each department is represented by ONE named AI Employee persona: AI Administration -- Alana, Cross-Department Admin Coordinator (inbox triage, scheduling, follow-ups, connects to other AI Employees for one unified daily brief); AI Human Resources -- Alice, AI Human Resources Officer (onboarding, leave tracking, application screening, TT payroll compliance); AI Finance -- Jamal, AI Finance Officer (reconciliation, discrepancy detection, automated monthly reports); AI Health & Safety -- Luna, AI Health & Safety Officer (incident monitoring, toolbox talks, hazard logs, compliance audits); AI Information Technology -- Sunil, AI IT Support Officer (help desk, data quality validation, 24/7 systems monitoring); AI Marketing -- Dean, AI Marketing Data Administrator (marketing data management, lead scoring, campaign performance reporting); AI Quality Assurance -- Zara, AI QA/QC Officer (inspection logging, non-conformance tracking, continuous compliance monitoring); AI Production -- Chan, AI Production Officer (output logging, inventory tracking, preventive maintenance scheduling, production trend analysis); AI Customer Relations -- Sierra, handles WhatsApp/email/website chat around the clock, qualifies leads, books appointments, follows up automatically (this was previously marketed separately as 'AI Channel', now folded in as a department here, same tier pricing as every other department). When discussing a department, use the employee's name naturally (e.g. 'Alana handles that' rather than just 'the Administration department'). All 9 departments share the same tier pricing above. Optional add-ons: Starter tier can add Custom Export Formats, Automated Report Delivery, Anomaly & Error Alerts; Growth tier adds those plus CRM & Database Sync, Multi-Source Data Intake, Analytics Dashboard; Enterprise includes ALL add-ons as standard.\n  - AI VOICE (/aivoice/) -- Starter (From $1,500 + $499/mo), Growth (From $2,500 + $899/mo), Enterprise (From $5,000 + $1,699/mo). A separate umbrella from AI Employees, not a department within it. Specific AI employees (flat list, not departmentalised): AI Receptionist, AI Customer Service, AI Sales Rep, AI Scheduler, AI Survey & Feedback, AI Accounts Receivable, AI HSE Assistant. Optional add-ons included at Starter: WhatsApp & SMS Follow-Up, Custom Voice & Persona, Multi-Language Support; Growth adds CRM Integration, Call Analytics Dashboard; Enterprise includes ALL add-ons as standard, including Outbound Calling Campaigns. AI Voice Feature Upgrades (can be added to ANY package at any time, with their own individual pricing): CRM Integration (+$300 setup +$50/mo), Outbound Calling Campaigns (+$400 setup +$75/mo), WhatsApp & SMS Follow-Up (+$200 setup +$30/mo), Custom Voice & Persona (+$250 setup +$30/mo), Call Analytics Dashboard (+$350 setup +$50/mo), Multi-Language Support (+$300 setup +$40/mo).\n  When a user asks about a specific role (e.g. 'AI receptionist' or 'data entry automation'), name the correct umbrella it belongs to and quote that umbrella's tier pricing -- the tier pricing (Starter/Growth/Enterprise) represents the complexity of the agent/employee chosen, not a separate per-role price list. Both umbrellas include an AI Management Plan (platform monitoring, performance optimization, workflow maintenance, updates, and support). All prices are starting prices -- final implementation and monthly pricing are confirmed following a Business Process Audit tailored to the client's actual volume and needs.\n\nMANDATORY: whenever a user asks about ANY automation product -- AI Consultancy in general, any AI Employees department (including AI Customer Relations), or AI Voice -- always give them two things in the same reply: the audit link (https://priscadezigns.org/audit/, a free self-service form that produces a personalised recommendation) and the WhatsApp number (1-868-342-4101). This applies no matter how the question arrives -- typed message or voice note. Frame it naturally, e.g. 'You can start your free audit at priscadezigns.org/audit to get a personalised recommendation, or message us directly on WhatsApp at 1-868-342-4101.'\n\nEVOLVE MOBILITY (driveevolve.com):\nStrategic digital partner. EVOLVE Mobility Limited is transforming the Caribbean's roads through green mobility, based in Trinidad & Tobago. Phone: +1-868-387-6937 (also \\\"EVPOWER\\\"). Email: info@driveevolve.com. WhatsApp: https://wa.me/18683876937\n\nBrands carried: BYD (est. 1994, EVs & battery innovation leader), Denza (2010, premium NEV brand under BYD, luxury design), Dongfeng (1969, one of China's largest automakers, EV sub-brand Dongfeng Nammi), GAC (1997, EVs & global expansion), iCAUR (2023, under Chery Group, youthful urban/light off-road EVs), JuneYao (1991, diverse Chinese holding group), Leapmotor (2015, smart EVs with autonomous driving tech), Wuling (1982, affordable mini EVs & utility vehicles).\n\nFeatured vehicles (current lineup, prices in TTD):\n- GAC Aion ES: TT$195,000 (from TT$2,500/mo), 440km range, 0-100km/h in 12.1s, 7-8hr AC charge, ~TT$22 to charge\n- Leapmotor C10: TT$255,000, 480km range, 0-100km/h in 7.5s, 9-10hr AC charge\n- BYD Sealion 7 (Premium) RWD: TT$360,000, 560km range, 0-100km/h in 6.7s, 8-9hr AC charge\n- GAC Aion V: TT$260,000, 600km range, 0-100km/h in 7.7s, 8-9hr AC charge\nMany vehicles are available from as low as TT$2,500/mo on financing — always mention this option since it makes EVs far more accessible than the full sticker price suggests. Full current inventory: driveevolve.com/vehicles.\n\nWhy choose EVOLVE: future-ready EVs from leading Chinese manufacturers; servicing & software updates handled by SBCS University (their official Hybrid+EV service partner); genuine parts supplied directly by EVOLVE; complete customer support before and after purchase.\n\nCharging: EVOLVE operates a growing charging network in Trinidad & Tobago, including a station at Ramps Cunupia (51A Railway Road, Cunupia), Type 2 connector, up to 100kW. Full map at driveevolve.com/charging.\n\nBooking: customers can book a showroom viewing at driveevolve.com/book-viewing or via WhatsApp. Payment types include full purchase and financing/lease options.\n\nFLEET ASSESSMENT & FLEET TRANSITION (B2B service, run jointly by Prisca Dezigns and EVOLVE):\nFor businesses in Trinidad & Tobago/the Caribbean that operate a vehicle fleet (delivery, logistics, corporate, courier, construction, oil & gas, etc.), Prisca Dezigns and EVOLVE offer a fleet EV transition service:\n- Free Fleet Assessment: a free site visit to assess the client's current fleet and evaluate EV transition suitability. Free charging equipment is also offered with qualifying purchases.\n- Fleet Transition process: (1) the business shares its fleet needs (executive sedan, field SUV, crew MPV, or a mix) via hello@priscadezigns.org or WhatsApp +1-868-342-4101; (2) Prisca Dezigns makes a direct introduction to EVOLVE Mobility's sales team, who confirm live pricing, availability, and fleet deal structure; (3) EVOLVE structures the fleet agreement (full purchase or bank-financed) and manages all documentation, registration, and delivery logistics, with Prisca Dezigns remaining available as liaison throughout.\n- Recommended starting point for larger fleets: a pilot fleet of 2-3 vehicles (e.g. one executive sedan, one SUV for field teams) to gather measurable cost data within 90 days before a full rollout -- phased/flexible acquisition avoids one large capital outlay.\n- Value case: switching to electric can cut fuel costs by up to 70%, with no oil changes, fewer brake replacements, and no transmission servicing. Fleet vehicles charge overnight (a fleet of 5 vehicles adds roughly TT$100/night to the electricity bill) so they leave fully charged every morning -- no fuel runs, no petrol station queues, no idle time during operating hours, and no need to stop at a public station at odd hours (a real security upgrade for staff). Every EVOLVE vehicle carries an 8-year manufacturer battery warranty, with battery degradation averaging just 2.3%/year (over 81% capacity remaining after 8 years).\n- This is a distinct lead type from general chatbot/web leads -- if a user mentions a fleet, multiple vehicles, or a vehicle-dependent business, treat it as a Fleet enquiry and route them toward WhatsApp for the team to follow up.\n\nRULES:\n- Keep replies conversational, 2-4 sentences.\n- Always provide exact prices when asked about specific tiers or vehicles — use the figures above exactly, never estimate or round differently.\n- Offer WhatsApp (1-868-342-4101) for booking or viewing.\n- Use point form for all summaries and service lists.\n- Be concise, professional, and results-oriented.";
+const SYSTEM_PROMPT = "Your name is Sierra. You are the AI concierge for Seamrite Designs -- a one-of-a-kind fashion studio and custom tailoring house based in Trinidad & Tobago, creating since 2018. If a user asks your name, tell them you're Sierra.\n\nYour personality: warm, stylish, encouraging, and genuinely excited about helping someone bring their vision to life. Keep replies concise (2-4 sentences) and always ask a follow-up question to keep things moving.\n\nATTACHMENT HANDLING:\nYou DO accept photos and files -- there is a paperclip/attach button in the chat. Clients often want to share reference photos, fabric ideas, or a piece they want altered; when they do, tell them to use the attach button, and never say you lack the capability. When an image is uploaded, you will receive it as actual image content you can see -- respond to what's genuinely in it. When a voice note is uploaded, you'll only get a text transcript if one was successfully captured; if told none is available, say so honestly and ask them to type instead.\n\nABOUT SEAMRITE DESIGNS:\nSeamrite Designs is a custom clothing studio in Trinidad & Tobago. Every piece is handmade to order -- 100% handmade, made in T&T, creating since 2018, ships worldwide. The studio also creates original acrylic paintings and culture-rooted handcrafted fashion under a sister line called Neh Neh.\n\nSERVICES (all consultation/quote-based -- there is no fixed price list, every piece is custom):\n- Custom Dresses -- casual to couture, patterned, cut, and sewn to the client's exact measurements\n- Uniforms -- school, corporate, and hospitality uniforms tailored to fit a whole team\n- Swimwear -- custom swimwear and carnival costumes\n- Costumes -- carnival, theatre, and event pieces designed to command attention\n- Alterations -- bringing existing garments back to life or making them fit perfectly\n- Bridal & Formal -- wedding gowns, bridesmaid dresses, prom, and other formalwear\n\nNEH NEH (sister brand -- art & culture):\nOriginal acrylic paintings and handcrafted fashion rooted in Caribbean culture. Every piece is made in Trinidad, signed and dated, made to last and made to be seen.\n\nSTUDIO ESSENTIALS (recommended tools, not Seamrite's own product line -- external affiliate-style picks the studio actually uses and trusts):\n- Sewing Machines -- Brother, Singer, Janome, from beginner to industrial-grade\n- Thread & Notions -- thread, needles, bobbins, zippers, trims\n- Fabrics & Textiles -- chiffon, satin, spandex, cotton\n- Cutting & Measuring -- rotary cutters, dress forms, measuring tapes, tailor's chalk\n\nMANDATORY: since every piece is custom and consultation-based, never invent a price. Always guide the user toward booking a consultation on WhatsApp so the team can quote their specific piece -- this applies to typed messages and voice notes alike.\n\nRULES:\n- Keep replies conversational, 2-4 sentences.\n- Never estimate or invent a price -- always route to a booked consultation for an accurate quote.\n- Offer WhatsApp (+1-868-791-0293) for booking or questions.\n- Use point form when listing services or options.\n- Be warm, concise, and encouraging.";
 
 let vpCounter = 0;
 const VP_PLAY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>';
@@ -766,185 +721,86 @@ function uploadToVault(file, fileName, type) {
     });
 }
 
-const PKGS={"standard":[{"name":"Starter","price":"$297","desc":"1-Page High-Fidelity Website \u00b7 Full Brand Setup (Logo, Domain, Favicon) \u00b7 Social Media Integration (FB/IG Covers) \u00b7 Technical SEO & SSL \u00b7 1 Month Free Maintenance"},{"name":"Growth","price":"$597","desc":"Manage 1 Brand Page (Full Social Setup) \u00b7 Full Branding & App/Web Architecture \u00b7 Content Creation & Copywriting \u00b7 Advanced SEO & Analytics \u00b7 1 Month Free Maintenance"},{"name":"Trusted","price":"$1,200","desc":"Full Business Automation \u00b7 10-15 Pages of High-Fidelity Content \u00b7 Premium Brand Scaling & PR Logic \u00b7 24/7 Priority Tech Support \u00b7 1 Month Free Maintenance"},{"name":"Custom","price":"Bespoke","desc":"Tailored Digital Architecture \u00b7 Custom API & Tool Integration \u00b7 Unique Brand Identity Design \u00b7 Scalable Infrastructure Logic \u00b7 Priority Support"}],"ecommerce":[{"name":"E-Starter","price":"$497","desc":"1-Page Online Shop \u00b7 Full Store Branding & Domain \u00b7 Integrated Social Shop Setup \u00b7 Payment Gateway Integration \u00b7 1 Month Free Maintenance"},{"name":"E-Growth","price":"$1,497","desc":"2-5 Page Store Architecture \u00b7 Full Shop Logic (10+ Products) \u00b7 Deep Copywriting & Product SEO \u00b7 Automated Fulfillment Sync \u00b7 1 Month Free Maintenance"},{"name":"E-Trusted","price":"$2,500","desc":"Elite Store (50+ Products) \u00b7 15+ Page Network Architecture \u00b7 Advanced Inventory & CRM Automation \u00b7 On-Chain Inventory Logic \u00b7 1 Month Free Maintenance"},{"name":"E-Commerce Maintenance","price":"$199.99/mo","desc":"E-Commerce Store Uptime & Security Monitoring \u00b7 Monthly Product & Content Updates \u00b7 High-Fidelity Technical Backups \u00b7 Priority Support"}],"continuity":[{"name":"Maintenance","price":"$99/mo","desc":"Monthly Updates \u00b7 Security Monitoring \u00b7 Performance Checks \u00b7 1 Content Edit/mo \u00b7 Priority Support"}],"templates":[{"name":"Template Site","price":"$149.99 + $19.99/mo","desc":"Custom branded to your business \u00b7 Live on your domain in 24 hours \u00b7 SSL, mobile-ready, SEO basics included \u00b7 1 complimentary revision round"},{"name":"+ Copywriting Add-On","price":"$49.99 + $4.99/update","desc":"We write your headline, bio & service copy \u00b7 Based on a short intake form you fill in \u00b7 $4.99 flat per edit after go-live"},{"name":"+ AI Chatbot Add-On","price":"$349.99 + $49.99/mo","desc":"24/7 AI \u2014 answers your business FAQs \u00b7 Preloaded with hours, location, services \u00b7 Works with new or existing sites"},{"name":"Micro Store","price":"$249.99 + $34.99/mo","desc":"Product grid \u2014 up to 12 products \u00b7 WhatsApp order button per product \u00b7 WhatsApp-driven orders with zero fees \u00b7 Everything in Standard Site included"},{"name":"Agency & Artist (Premium 3D)","price":"$299.99 + $19.99/mo","desc":"High-end cinematic 3D scroll experience \u00b7 Aeon \u00b7 Nexus \u00b7 Stellar \u00b7 Live on your domain in 24\u201348 hours"}],"aidata":[{"name":"Starter","price":"From $1,250 + $599/mo","desc":"AI Data Entry, Processing, Records, Reporting, Workflow & Document automation \u00b7 Add-ons available: Custom Export Formats, Automated Report Delivery, Anomaly & Error Alerts"},{"name":"Growth","price":"From $2,000 + $899/mo","desc":"Same roles \u00b7 Add-ons available: everything in Starter plus CRM & Database Sync, Multi-Source Data Intake, Analytics Dashboard"},{"name":"Enterprise","price":"From $4,000 + $1,499/mo","desc":"Same roles at enterprise scale \u00b7 ALL add-ons included as standard"}],"aivoice":[{"name":"Starter","price":"From $1,500 + $499/mo","desc":"AI Receptionist, Customer Service, Sales Rep, Scheduler, Survey & Feedback, Accounts Receivable, HSE Assistant \u00b7 Add-ons available: WhatsApp & SMS Follow-Up, Custom Voice & Persona, Multi-Language Support"},{"name":"Growth","price":"From $2,500 + $899/mo","desc":"Same roles \u00b7 Add-ons available: everything in Starter plus CRM Integration, Call Analytics Dashboard"},{"name":"Enterprise","price":"From $5,000 + $1,699/mo","desc":"Full voice network across all roles \u00b7 ALL add-ons included as standard"}],"aichannel":[{"name":"Starter","price":"From $750 + $399/mo","desc":"Responds to basic inquiries, captures lead name & contact, simple FAQ & greeting logic, monthly performance report"},{"name":"Growth","price":"From $1,250 + $599/mo","desc":"Qualifies & scores leads automatically, books appointments without human input, sends follow-up sequences, connects to your CRM, bi-weekly performance report"},{"name":"Enterprise","price":"From $2,500 + $999/mo","desc":"Full conversational AI with custom personality, multi-language & industry-specific logic, sales & objection-handling intelligence, deep CRM sync & analytics, weekly reporting dashboard"}],"specializedNote":"All Specialized AI Network pricing (AI Administration/HR/Finance/Health & Safety/IT/Marketing/Quality Assurance/Production, AI Voice Agents, AI Customer Relations) starts from the figures shown. Final implementation and monthly AI Management pricing are confirmed following a Business Process Audit, and every plan includes ongoing platform monitoring, updates, and support."};
+const PKGS={};
 
 const STEPS = {
-    "request_audit": {
-    "bot": "I can run a full high-fidelity audit on your current digital infrastructure \u2014 from your website conversion to your automation efficiency. Ready to level up?",
-    "r": [
-        {
-            "l": "Yes, start audit",
-            "s": "talk",
-            "i": "clipboard-check"
-        },
-        {
-            "l": "Back",
-            "s": "start",
-            "i": "arrow-left"
-        }
-    ]
-},
     "start": {
-        "bot": "Hey 👋 I'm Sierra. What brings you here today?",
+        "bot": "Welcome to Seamrite Designs \u2014 I'm Sierra. Wear something made for you. How can I help today?",
         "r": [
-            { "l": "About Prisca Dezigns", "s": "about", "i": "info" },
-            { "l": "Talk to Drew about pricing", "s": "__drew_text__", "i": "dollar-sign" },
-            { "l": "General support", "s": "talk", "i": "message-circle" }
+            { "l": "Explore our services", "s": "services", "i": "scissors" },
+            { "l": "About Seamrite Designs", "s": "about", "i": "info" },
+            { "l": "Neh Neh (Art & Culture)", "s": "nehneh", "i": "heart" },
+            { "l": "Studio essentials", "s": "shop", "i": "package" },
+            { "l": "Talk to Drew about booking", "s": "__drew_text__", "i": "calendar" },
+            { "l": "Talk to the team", "s": "talk", "i": "message-circle" }
         ]
     },
     "drew_start": {
-        "bot": "Hey, I'm Drew — I handle sales and pricing. What are you looking to build or automate?",
+        "bot": "Hey, I'm Drew \u2014 I help get your consultation booked. What are you looking to have made?",
         "r": [
-            { "l": "I want a template site", "s": "pkg_templates", "i": "color-swatch" },
-            { "l": "I need a custom website", "s": "need_website", "i": "layout" },
-            { "l": "I need AI automation", "s": "automation", "i": "cpu" },
-            { "l": "Agency Packages", "s": "pkg_menu", "i": "package" }
+            { "l": "Custom Dresses", "s": "svc_dresses", "i": "scissors" },
+            { "l": "Uniforms", "s": "svc_uniforms", "i": "users" },
+            { "l": "Swimwear & Carnival", "s": "svc_swimwear", "i": "sun" },
+            { "l": "Costumes", "s": "svc_costumes", "i": "star" },
+            { "l": "Alterations", "s": "svc_alterations", "i": "scissors" },
+            { "l": "Bridal & Formal", "s": "svc_bridal", "i": "heart" }
         ]
     },
-    "about": {
-        "bot": "Prisca Dezigns is an enterprise AI and digital transformation partner — we build high-fidelity web architecture, AI automation systems, and brand infrastructure for businesses ready to scale. Based in Trinidad & Tobago, working across the Caribbean.",
+    "services": {
+        "bot": "Here's what we create, all made to measure:\n\u2022 Custom Dresses\n\u2022 Uniforms (school, corporate, hospitality)\n\u2022 Swimwear & Carnival Costumes\n\u2022 Costumes (theatre, events)\n\u2022 Alterations\n\u2022 Bridal & Formal\n\nEvery piece is quoted individually \u2014 want to book a consultation for one of these?",
         "r": [
-            { "l": "Evolve Mobility", "s": "about_brands", "i": "car" },
-            { "l": "The Way Made Known", "s": "about_twmk", "i": "heart" },
-            { "l": "About Prisca Dezigns", "s": "about_founder", "i": "user" },
-            { "l": "Back", "s": "start", "i": "arrow-left" }
+            { "l": "Yes, book a consultation", "s": "__drew_text__", "i": "calendar" },
+            { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
-    "about_brands": {
-        "bot": "We're the strategic digital partners for EVOLVE Mobility (driveevolve.com), transforming the Caribbean's roads through green mobility.\n\nCurrent lineup includes:\n⚡ GAC Aion ES — from TT$195,000 (TT$2,500/mo)\n⚡ Leapmotor C10 — TT$255,000\n⚡ GAC Aion V — TT$260,000\n⚡ BYD Sealion 7 (Premium) — TT$360,000\n\nCarrying BYD, Denza, GAC, Leapmotor, Wuling & more, with servicing by SBCS University.",
-        "r": [
-            { "l": "Visit Evolve Mobility", "url": "https://driveevolve.com", "i": "external-link" },
-            { "l": "Fleet Assessment & Transition", "s": "fleet_transition", "i": "truck" },
-            { "l": "Back", "s": "about", "i": "arrow-left" }
-        ]
-    },
-    "fleet_transition": {
-        "bot": "If your business runs a vehicle fleet, we offer a free on-site assessment and handle the full EV transition — from picking the right models to financing, documentation, and delivery. Fuel costs typically drop up to 70%, with no oil changes or transmission servicing. Most fleets start with a 2-3 vehicle pilot to see real numbers within 90 days.",
+    "svc_dresses": {
+        "bot": "Custom Dresses \u2014 from casual to couture, every dress is patterned, cut, and sewn to your exact measurements. Let's get your consultation booked so we can talk fabric, style, and timeline.",
         "wa": true
     },
-    "about_twmk": {
-        "bot": "The Way Made Known (TWMK) is our humanitarian backbone. We use a portion of our agency profits to share the Gospel and provide community support in Trinidad and Tobago.",
+    "svc_uniforms": {
+        "bot": "Uniforms \u2014 school, corporate, or hospitality, tailored to fit your whole team perfectly. Let's book a consultation to talk numbers and fit.",
+        "wa": true
+    },
+    "svc_swimwear": {
+        "bot": "Swimwear & Carnival \u2014 bold, custom pieces built for the sun and made to turn heads on the road. Let's book your consultation.",
+        "wa": true
+    },
+    "svc_costumes": {
+        "bot": "Costumes \u2014 carnival, theatre, or event pieces that command attention in any crowd. Let's book a consultation to bring your vision to life.",
+        "wa": true
+    },
+    "svc_alterations": {
+        "bot": "Alterations \u2014 we'll bring your favourite piece back to life, or make it fit like it was made for you. Let's book a consultation.",
+        "wa": true
+    },
+    "svc_bridal": {
+        "bot": "Bridal & Formal \u2014 wedding gowns, bridesmaid dresses, prom, and other unforgettable pieces for life's biggest moments. Let's book your consultation.",
+        "wa": true
+    },
+    "about": {
+        "bot": "Seamrite Designs is a one-of-a-kind fashion studio based in Trinidad & Tobago, creating since 2018. From carnival costumes to bridal gowns, custom swimwear to school uniforms \u2014 every piece is handmade with intention, pride, and love for the island. 100% handmade to order, and we ship worldwide.",
         "r": [
-            { "l": "Back", "s": "about", "i": "arrow-left" }
+            { "l": "Explore our services", "s": "services", "i": "scissors" },
+            { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
-    "about_founder": {
-        "bot": "Prisca Dezigns was founded in Trinidad & Tobago by Priscilla Narine. The agency operates as an enterprise AI and digital transformation partner — combining high-fidelity web architecture with AI automation (chatbots, WhatsApp automation, voice agents, lead qualification) to help businesses modernize how they operate, not just how they look online.",
+    "nehneh": {
+        "bot": "Neh Neh is our sister line \u2014 original acrylic paintings and handcrafted fashion rooted in Caribbean culture. Every piece is made in Trinidad, signed and dated, made to last and made to be seen.",
         "r": [
-            { "l": "Back", "s": "about", "i": "arrow-left" }
+            { "l": "I'm interested in a piece", "s": "__drew_text__", "i": "calendar" },
+            { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
-    "need_website": {
-        "bot": "Our custom websites are built from scratch — fully tailored to your brand, SEO-optimised, and delivered fast. What do you need?",
+    "shop": {
+        "bot": "These are the tools we actually use and trust in the studio:\n\u2022 Sewing Machines (Brother, Singer, Janome)\n\u2022 Thread & Notions\n\u2022 Fabrics & Textiles\n\u2022 Cutting & Measuring Tools",
         "r": [
-            { "l": "Need it in 24hrs — $200", "s": "pkg_oneday", "i": "zap" },
-            { "l": "I need a full custom build", "s": "pkg_standard", "i": "code" },
-            { "l": "Mine isn't converting", "s": "bad_website", "i": "trending-down" },
-            { "l": "Show me templates instead", "s": "pkg_templates", "i": "color-swatch" }
-        ]
-    },
-    "bad_website": {
-        "bot": "That's usually a sign of weak conversion design, slow load times, or missed follow-up on leads — all fixable. Want us to run a quick audit, or look at AI automation to catch the leads you're currently losing?",
-        "r": [
-            { "l": "Run an audit", "s": "request_audit", "i": "clipboard-check" },
-            { "l": "Show me AI automation", "s": "automation", "i": "cpu" },
-            { "l": "Back", "s": "need_website", "i": "arrow-left" }
-        ]
-    },
-    "pkg_menu": {
-        "bot": "Our agency packages are full custom builds — designed, developed and delivered by Prisca Dezigns. Which fits your needs?",
-        "r": [
-            { "l": "1-Day Website — $200", "s": "pkg_oneday", "i": "zap" },
-            { "l": "Custom Website Packages", "s": "pkg_standard", "i": "layout" },
-            { "l": "E-Commerce Packages", "s": "pkg_ecommerce", "i": "shopping-bag" },
-            { "l": "AI Consultancy", "s": "pkg_ai", "i": "cpu" },
-            { "l": "Maintenance", "s": "pkg_continuity", "i": "tool" },
-            { "l": "I want a template instead", "s": "pkg_templates", "i": "color-swatch" }
-        ]
-    },
-    "pkg_oneday": {
-        "bot": "The 1-Day Website is a fully custom site — built to your brand, live within 24 hours. One flat price: $200 setup (includes 1 revision). Then $50/mo to keep it live, optimised, and secure. Any add-on after that is $50 USD each.",
-        "r": [
-            { "l": "What's included?", "s": "oneday_included", "i": "check-circle" },
-            { "l": "I want this — let's talk", "s": "talk", "i": "message-circle" },
-            { "l": "See other packages", "s": "pkg_menu", "i": "package" }
-        ]
-    },
-    "oneday_included": {
-        "bot": "Your 1-Day Site includes: ✦ Full custom design (not a template) ✦ Mobile-first, fast-loading ✦ SEO + GEO + AEO optimised ✦ WhatsApp & contact integration ✦ 1 Revision Included ✦ Live in 24 hours. $200 flat. $50/mo maintenance. Any additional add-on is $50 USD each.",
-        "r": [
-            { "l": "Let's get started", "s": "talk", "i": "zap" },
-            { "l": "See template option instead", "s": "pkg_templates", "i": "color-swatch" },
-            { "l": "See all packages", "s": "pkg_menu", "i": "package" }
-        ]
-    },
-    "automation": {
-        "bot": "We build AI systems that replace a full-time customer service rep. They respond, qualify, and follow up — all day, every day. What are you trying to automate?",
-        "r": [
-            { "l": "Customer service / enquiries", "s": "how_it_works", "i": "headphones" },
-            { "l": "AI Employees (9 departments)", "s": "aidata_products", "i": "database" },
-            { "l": "AI Voice (receptionist, sales)", "s": "aivoice_products", "i": "phone" },
-            { "l": "Talk to someone", "s": "talk", "i": "message-circle" }
-        ]
-    },
-    "whatsapp_auto": {
-        "bot": "We integrate an AI agent directly into your WhatsApp Business. It responds to every message instantly, qualifies the lead, and alerts you only when someone is ready to pay.",
-        "r": [
-            { "l": "See AI Consultancy", "s": "pkg_ai", "i": "package" },
-            { "l": "Talk to someone", "s": "talk", "i": "message-circle" }
-        ]
-    },
-    "how_it_works": {
-        "bot": "We connect an AI agent to your WhatsApp, website, or email. It greets every lead, asks qualifying questions, routes serious buyers to you, and follows up with everyone else automatically. Setup takes 2–4 weeks.",
-        "r": [
-            { "l": "See AI Consultancy", "s": "pkg_ai", "i": "package" },
-            { "l": "Talk to someone", "s": "talk", "i": "message-circle" }
+            { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
         ]
     },
     "talk": {
-        "bot": "The best way to get moving is a direct handshake on WhatsApp. I've prepared a direct link for you to message the management team.",
+        "bot": "Our team is ready on WhatsApp to help with your consultation or any questions.",
         "wa": true
-    },
-    "pkg_templates": { "bot": "Choose from our high-fidelity templates — live in 24-48hrs.", "pkg": "templates" },
-    "pkg_standard": { "bot": "Professional custom web packages for growing brands.", "pkg": "standard" },
-    "pkg_ecommerce": { "bot": "Scalable e-commerce solutions for global selling.", "pkg": "ecommerce" },
-    "pkg_ai": {
-        "bot": "AI Consultancy at Prisca Dezigns covers two things: AI Employees (department-based automation) and AI Voice (voice agents). Which one fits what you're trying to automate?",
-        "r": [
-            { "l": "AI Employees (9 departments)", "s": "aidata_products", "i": "database" },
-            { "l": "AI Voice (receptionist, sales)", "s": "aivoice_products", "i": "phone" },
-            { "l": "Start Free Audit", "url": "https://priscadezigns.org/audit/", "i": "clipboard-check" },
-            { "l": "Talk to someone", "s": "talk", "i": "message-circle" }
-        ]
-    },
-    "aidata_products": {
-        "bot": "AI Employees is organised by department — meet the specialist AI Employee for each:\n\n<b>AI Administration — Alana</b>\nCross-department admin coordinator. Handles inbox triage, scheduling, follow-ups, and connects to your other AI Employees for one unified daily brief.\n\n<b>AI Human Resources — Alice</b>\nManages onboarding, leave tracking, application screening, and TT payroll compliance.\n\n<b>AI Finance — Jamal</b>\nReconciles transactions, surfaces discrepancies early, and generates monthly financial reports automatically.\n\n<b>AI Health & Safety — Luna</b>\nMonitors incident reports, distributes toolbox talks, tracks hazard logs, and audits compliance.\n\n<b>AI Information Technology — Sunil</b>\nHandles help desk requests, validates data quality, and monitors your systems 24/7.\n\n<b>AI Marketing — Dean</b>\nManages marketing data, scores leads, and delivers campaign performance reporting.\n\n<b>AI Quality Assurance — Zara</b>\nLogs inspections, tracks non-conformances, and monitors your compliance posture continuously.\n\n<b>AI Production — Chan</b>\nLogs output data, tracks inventory, schedules preventive maintenance, and analyses production trends.\n\n<b>AI Customer Relations — Sierra</b>\nHandles WhatsApp, email, and website chat around the clock — qualifies leads, books appointments, and follows up automatically.\n\nWant a personalised recommendation? Start your free audit at priscadezigns.org/audit, or message us on WhatsApp.",
-        "pkg": "aidata",
-        "r": [
-            { "l": "Start Free Audit", "url": "https://priscadezigns.org/audit/", "i": "clipboard-check" },
-            { "l": "← Back", "s": "pkg_ai", "i": "arrow-left" }
-        ]
-    },
-    "aivoice_products": {
-        "bot": "AI Voice covers seven specific roles:\n• AI Receptionist\n• AI Customer Service\n• AI Sales Rep\n• AI Scheduler\n• AI Survey & Feedback\n• AI Accounts Receivable\n• AI HSE Assistant\n\nThe pricing below represents the complexity of the agent/employee you choose. Want a personalised recommendation? Start your free audit at priscadezigns.org/audit, or message us on WhatsApp.",
-        "pkg": "aivoice",
-        "r": [
-            { "l": "Start Free Audit", "url": "https://priscadezigns.org/audit/", "i": "clipboard-check" },
-            { "l": "← Back", "s": "pkg_ai", "i": "arrow-left" }
-        ]
-    },
-    "aichannel_products": {
-        "bot": "AI Customer Relations covers three channels, and each one runs the same two AI Employees — AI Customer Service and AI Lead Generation:\n• Website Automation\n• WhatsApp Automation\n• Email Automation\n\nThe pricing below represents the complexity of the agent/employee you choose. Want a personalised recommendation? Start your free audit at priscadezigns.org/audit, or message us on WhatsApp.",
-        "pkg": "aichannel",
-        "r": [
-            { "l": "Start Free Audit", "url": "https://priscadezigns.org/audit/", "i": "clipboard-check" },
-            { "l": "← Back", "s": "pkg_ai", "i": "arrow-left" }
-        ]
-    },
-    "pkg_aidata": { "bot": "AI Employees — hire specialist AI staff across 9 departments (Admin, HR, Finance, Health & Safety, IT, Marketing, Quality Assurance, Production, Customer Relations), each on the same tier pricing.", "pkg": "aidata" },
-    "pkg_aivoice": { "bot": "AI Voice — human-grade voice agents for reception, sales, lead qualification, and survey/feedback, answering calls 24/7.", "pkg": "aivoice" },
-    "pkg_aichannel": { "bot": "AI Customer Relations — autonomous email, website, and WhatsApp lead conversion pipelines, working your inbox and chats around the clock.", "pkg": "aichannel" },
-    "pkg_continuity": { "bot": "Keep your digital infrastructure peak & secure.", "pkg": "continuity" }
+    }
 };
 
 let hist = [];
