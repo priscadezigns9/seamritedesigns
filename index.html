@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="/seamritedesigns/manifest.json">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#FF69B4">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -337,9 +337,9 @@ img.sd-img-reveal.sd-visible{clip-path:inset(0 0% 0 0)}
   <span class="nav-logo">Seamrite Designs</span>
   <div class="nav-links">
     <a href="#seamrite-services">Services</a>
-    <a href="/seamritedesigns/blog/" style="color:#FF4DA6;font-weight:700;letter-spacing:2px">Blog</a>
+    <a href="/blog/" style="color:#FF4DA6;font-weight:700;letter-spacing:2px">Blog</a>
     <a href="#nehneh" class="nav-btn-nehneh">Neh Neh ✦</a>
-    <a href="/seamritedesigns/shop/" class="nav-shop">My Shop Picks ✦</a><a href="https://wa.me/18687910293?text=Hi%20Seamrite%20Designs!%20I%27d%20like%20to%20book%20a%20consultation." class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+    <a href="/shop/" class="nav-shop">My Shop Picks ✦</a><a href="https://wa.me/18687910293?text=Hi%20Seamrite%20Designs!%20I%27d%20like%20to%20book%20a%20consultation." class="nav-cta" target="_blank" rel="noopener">Book Now</a>
   </div>
   <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-drawer').classList.toggle('open')"><span></span><span></span><span></span></button>
 
@@ -348,7 +348,7 @@ img.sd-img-reveal.sd-visible{clip-path:inset(0 0% 0 0)}
   <a href="/">Home</a>
   <a href="#seamrite-services">Services</a>
   <a href="#nehneh">Neh Neh</a>
-  <a href="/seamritedesigns/shop/">My Shop Picks ✦</a>
+  <a href="/shop/">My Shop Picks ✦</a>
   <a href="https://wa.me/18687910293" target="_blank">Book Now</a>
 </div>
 
@@ -753,7 +753,7 @@ function dismissPWA() {
 }
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/seamritedesigns/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW error', e));
+    navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW error', e));
   });
 }
 </script>
