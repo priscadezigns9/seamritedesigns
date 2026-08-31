@@ -14,7 +14,7 @@
     }
     
     #pd-chat-bubble {
-        position:fixed; bottom:28px; right:28px; z-index:9999;
+        position:fixed; bottom:100px; left:28px; right:auto; z-index:9999;
         width:64px; height:64px; border-radius:24px;
         background: linear-gradient(135deg, var(--cb-purple), var(--cb-deep));
         box-shadow: 0 12px 40px rgba(255, 20, 147, 0.4);
@@ -29,7 +29,7 @@
     #pd-chat-bubble.open .ai-svg { display:none; }
     
     #pd-chat-window {
-        position:fixed; bottom:108px; right:28px; z-index:9998;
+        position:fixed; bottom:180px; left:28px; right:auto; z-index:9998;
         width:420px; background: var(--cb-bg); backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 20, 147, 0.1);
         box-shadow: 0 30px 90px rgba(30, 27, 75, 0.2);
@@ -144,7 +144,7 @@
     .cpkg-desc { font-size:0.85rem; color:#475569; margin-top:12px; line-height:1.6; }
 
     @media(max-width:520px){
-        #pd-chat-window { width:calc(100vw - 32px); right:16px; bottom:100px; border-radius:24px; max-height: calc(100vh - 130px); }
+        #pd-chat-window { width:calc(100vw - 32px); left:16px; right:auto; bottom:172px; border-radius:24px; max-height: calc(100vh - 130px); }
     }
     `;
         document.head.appendChild(s);
