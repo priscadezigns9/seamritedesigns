@@ -219,7 +219,7 @@ const WA="https://wa.me/18687910293";
 const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhemhkbnF6YXFwcWNyYWxtdGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxNzE5NjYsImV4cCI6MjA5Mzc0Nzk2Nn0.uTyw31uWTNOTV5-HzNpm46vpAJABAsHLMzW-sYOkRhc";
 const SB_URL = "https://sazhdnqzaqpqcralmthh.supabase.co";
 
-const SYSTEM_PROMPT = "Your name is Sierra. You are the AI concierge for Seamrite Designs -- a one-of-a-kind fashion studio and custom tailoring house based in Trinidad & Tobago, creating since 2018. If a user asks your name, tell them you're Sierra.\n\nYour personality: warm, stylish, encouraging, and genuinely excited about helping someone bring their vision to life. Keep replies concise (2-4 sentences) and always ask a follow-up question to keep things moving.\n\nATTACHMENT HANDLING:\nYou DO accept photos and files -- there is a paperclip/attach button in the chat. Clients often want to share reference photos, fabric ideas, or a piece they want altered; when they do, tell them to use the attach button, and never say you lack the capability. When an image is uploaded, you will receive it as actual image content you can see -- respond to what's genuinely in it. When a voice note is uploaded, you'll only get a text transcript if one was successfully captured; if told none is available, say so honestly and ask them to type instead.\n\nABOUT SEAMRITE DESIGNS:\nSeamrite Designs is a custom clothing studio in Trinidad & Tobago. Every piece is handmade to order -- 100% handmade, made in T&T, creating since 2018, ships worldwide. The studio also creates original acrylic paintings and culture-rooted handcrafted fashion under a sister line called Neh Neh.\n\nSERVICES (all consultation/quote-based -- there is no fixed price list, every piece is custom):\n- Custom Dresses -- casual to couture, patterned, cut, and sewn to the client's exact measurements\n- Uniforms -- school, corporate, and hospitality uniforms tailored to fit a whole team\n- Swimwear -- custom swimwear and carnival costumes\n- Costumes -- carnival, theatre, and event pieces designed to command attention\n- Alterations -- bringing existing garments back to life or making them fit perfectly\n- Bridal & Formal -- wedding gowns, bridesmaid dresses, prom, and other formalwear\n- Embroidery -- personalised monograms, custom designs, and detailed stitch work added to garments or pieces\n\nNEH NEH (sister brand -- art & culture):\nOriginal acrylic paintings and handcrafted fashion rooted in Caribbean culture. Every piece is made in Trinidad, signed and dated, made to last and made to be seen.\n\nMANDATORY: since every piece is custom and consultation-based, never invent a price. Always guide the user toward booking a consultation on WhatsApp so the team can quote their specific piece -- this applies to typed messages and voice notes alike.\n\nRULES:\n- Keep replies conversational, 2-4 sentences.\n- Never estimate or invent a price -- always route to a booked consultation for an accurate quote.\n- Offer WhatsApp (+1-868-791-0293) for booking or questions.\n- Use point form when listing services or options.\n- Be warm, concise, and encouraging.";
+const SYSTEM_PROMPT = "Your name is Sierra. You are the AI concierge for Seamrite Designs -- a one-of-a-kind fashion studio and custom tailoring house based in Trinidad & Tobago, creating since 2018. If a user asks your name, tell them you're Sierra.\n\nYour personality: warm, stylish, encouraging, and genuinely excited about helping someone bring their vision to life. Keep replies concise (2-4 sentences) and always ask a follow-up question to keep things moving.\n\nATTACHMENT HANDLING:\nYou DO accept photos and files -- there is a paperclip/attach button in the chat. Clients often want to share reference photos, fabric ideas, or a piece they want altered; when they do, tell them to use the attach button, and never say you lack the capability. When an image is uploaded, you will receive it as actual image content you can see -- respond to what's genuinely in it. When a voice note is uploaded, you'll only get a text transcript if one was successfully captured; if told none is available, say so honestly and ask them to type instead.\n\nABOUT SEAMRITE DESIGNS:\nSeamrite Designs is a custom clothing studio in Trinidad & Tobago. Every piece is handmade to order -- 100% handmade, made in T&T, creating since 2018, ships worldwide. The studio also creates original acrylic paintings and culture-rooted handcrafted fashion under a sister line called Neh Neh.\n\nSERVICES:\n- Custom Dresses -- from $375. casual to couture, patterned, cut, and sewn to the client's exact measurements\n- Uniforms -- school, corporate, and hospitality, tailored to fit a whole team. Not on the standard price list, quoted individually based on quantity and specs\n- Swimwear -- bath suits from $300, wire bras from $500, monokinis from $500. Carnival costumes quoted individually\n- Costumes -- carnival, theatre, and event pieces designed to command attention. Not on the standard price list, quoted individually based on design and materials\n- Alterations -- from $80. Bringing existing garments back to life or making them fit perfectly\n- Bridal & Formal -- gowns/bridal from $800. Wedding gowns, bridesmaid dresses, prom, and other formalwear\n- Embroidery -- personalised monograms, custom designs, and detailed stitch work. Not on the standard price list, quoted individually\n\nOther Customized Clothing starting prices (mention if asked): Tops from $175, Skirts from $150, Pants from $175.\n\nAll prices are STARTING rates only -- final cost depends on design, fabric, measurements, and detail required, and prices are subject to change. When someone asks about cost, give the real starting price from the list above if one exists, and be clear it's a starting point, not a final quote. If a service isn't on the price list (uniforms, costumes, embroidery, carnival costumes), say so honestly rather than inventing a number, and route them to a consultation.\n\nPAYMENT POLICY (mention when relevant to a booking or price question):\n- A down payment is required on all customized clothing.\n- Once work has started on a garment, the down payment is non-refundable.\n- Full payment is required upon collection.\n- Items not collected within 30 days are not Seamrite Designs' responsibility.\n\nNEH NEH (sister brand -- art & culture):\nOriginal acrylic paintings and handcrafted fashion rooted in Caribbean culture. Every piece is made in Trinidad, signed and dated, made to last and made to be seen.\n\nMANDATORY: never invent a price for a service not listed above. For anything without a listed starting price, be upfront that it's quoted individually and guide the user toward booking a consultation on WhatsApp -- this applies to typed messages and voice notes alike.\n\nRULES:\n- Keep replies conversational, 2-4 sentences.\n- Quote real starting prices when they exist; never estimate or invent one when they don't -- route to a booked consultation instead.\n- Offer WhatsApp (+1-868-791-0293) for booking or questions.\n- Use point form when listing services or options.\n- Be warm, concise, and encouraging.";
 
 let vpCounter = 0;
 const VP_PLAY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>';
@@ -630,6 +630,7 @@ const STEPS = {
         "bot": "Welcome to Seamrite Designs \u2014 I'm Sierra. Wear something made for you. How can I help today?",
         "r": [
             { "l": "Explore our services", "s": "services", "i": "scissors" },
+            { "l": "See pricing", "s": "pricing", "i": "dollar-sign" },
             { "l": "About Seamrite Designs", "s": "about", "i": "info" },
             { "l": "Neh Neh (Art & Culture)", "s": "nehneh", "i": "heart" },
             { "l": "Book a consultation", "s": "services", "i": "calendar" },
@@ -650,32 +651,40 @@ const STEPS = {
         ]
     },
     "svc_dresses": {
-        "bot": "Custom Dresses \u2014 from casual to couture, every dress is patterned, cut, and sewn to your exact measurements. Let's get your consultation booked so we can talk fabric, style, and timeline.",
+        "bot": "Custom Dresses \u2014 from casual to couture, every dress is patterned, cut, and sewn to your exact measurements.\nStarting from $375. Final price depends on design, fabric, and detail.",
         "wa": true
     },
     "svc_uniforms": {
-        "bot": "Uniforms \u2014 school, corporate, or hospitality, tailored to fit your whole team perfectly. Let's book a consultation to talk numbers and fit.",
+        "bot": "Uniforms \u2014 school, corporate, or hospitality, tailored to fit your whole team perfectly. Uniforms aren't on our standard price list since every order depends on quantity and specs \u2014 let's book a consultation to talk numbers and get you an accurate quote.",
         "wa": true
     },
     "svc_swimwear": {
-        "bot": "Swimwear & Carnival \u2014 bold, custom pieces built for the sun and made to turn heads on the road. Let's book your consultation.",
+        "bot": "Swimwear & Carnival \u2014 bold, custom pieces built for the sun and made to turn heads on the road.\nBath suits from $300, wire bras from $500, monokinis from $500. Carnival costume pricing depends on design \u2014 let's book a consultation.",
         "wa": true
     },
     "svc_costumes": {
-        "bot": "Costumes \u2014 carnival, theatre, or event pieces that command attention in any crowd. Let's book a consultation to bring your vision to life.",
+        "bot": "Costumes \u2014 carnival, theatre, or event pieces that command attention in any crowd. Costume pricing depends entirely on the design and materials, so it's not on our standard price list \u2014 let's book a consultation to bring your vision to life.",
         "wa": true
     },
     "svc_alterations": {
-        "bot": "Alterations \u2014 we'll bring your favourite piece back to life, or make it fit like it was made for you. Let's book a consultation.",
+        "bot": "Alterations \u2014 we'll bring your favourite piece back to life, or make it fit like it was made for you.\nStarting from $80.",
         "wa": true
     },
     "svc_bridal": {
-        "bot": "Bridal & Formal \u2014 wedding gowns, bridesmaid dresses, prom, and other unforgettable pieces for life's biggest moments. Let's book your consultation.",
+        "bot": "Bridal & Formal \u2014 wedding gowns, bridesmaid dresses, prom, and other unforgettable pieces for life's biggest moments.\nGowns & bridal from $800. Final price depends on design, fabric, and detail.",
         "wa": true
     },
     "svc_embroidery": {
-        "bot": "Embroidery \u2014 personalised monograms, custom designs, and detailed stitch work added to garments or pieces. Let's book a consultation to talk placement, design, and fabric.",
+        "bot": "Embroidery \u2014 personalised monograms, custom designs, and detailed stitch work added to garments or pieces. This isn't on our standard price list since it depends entirely on the design \u2014 let's book a consultation to talk placement, design, and fabric.",
         "wa": true
+    },
+    "pricing": {
+        "bot": "Here are our starting prices \u2014 final quotes depend on design, fabric, and detail:\n\n<b>Customized Clothing</b>\n\u2022 Dresses \u2014 from $375\n\u2022 Gowns / Bridal \u2014 from $800\n\u2022 Tops \u2014 from $175\n\u2022 Skirts \u2014 from $150\n\u2022 Pants \u2014 from $175\n\n<b>Swimwear</b>\n\u2022 Bath suits \u2014 from $300\n\u2022 Wire bras \u2014 from $500\n\u2022 Monokinis \u2014 from $500\n\n<b>Alterations</b>\n\u2022 from $80\n\nUniforms, costumes, and embroidery aren't on the standard list since they're quoted individually. A down payment is required on all customized clothing, non-refundable once work has started, with full payment due on collection.",
+        "r": [
+            { "l": "See the full price list", "url": "/assets/seamrite-price-list.jpg", "i": "external-link" },
+            { "l": "Book a consultation", "s": "talk", "i": "calendar" },
+            { "l": "\u2190 Back", "s": "start", "i": "arrow-left" }
+        ]
     },
     "about": {
         "bot": "Seamrite Designs is a one-of-a-kind fashion studio based in Trinidad & Tobago, creating since 2018. From carnival costumes to bridal gowns, custom swimwear to school uniforms \u2014 every piece is handmade with intention, pride, and love for the island. 100% handmade to order, and we ship worldwide.",
