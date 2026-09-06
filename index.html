@@ -545,46 +545,6 @@ window.addEventListener('scroll',function(){
 </script>
 <!-- /Standard Float Stack -->
 
-<!-- PWA Install Prompt -->
-<div id="pwaInstallBanner" style="display:none;position:fixed;bottom:210px;right:24px;z-index:10000;background:linear-gradient(135deg,#0A0008,#1a0012);border:1px solid rgba(255,105,180,0.4);border-radius:18px;padding:16px 20px;max-width:300px;box-shadow:0 8px 32px rgba(255,20,147,0.25);backdrop-filter:blur(12px);">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-    <img src="https://priscadezigns.org/logos/seamritedesigns.jpg" alt="Seamrite" title="Seamrite decoding=" loading="lazy" decoding="async">
-      <div style="color:#FF69B4;font-weight:700;font-size:0.9rem;">Add to Home Screen</div>
-      <div style="color:#7A4060;font-size:0.75rem;">Install Seamrite Designs as an app</div>
-    </div>
-  </div>
-  <div style="display:flex;gap:8px;">
-    <button onclick="installPWA()" style="flex:1;background:linear-gradient(135deg,#FF1493,#FF69B4);color:#fff;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:0.85rem;cursor:pointer;">Install</button>
-    <button onclick="dismissPWA()" style="background:rgba(255,105,180,0.1);color:#FF69B4;border:1px solid rgba(255,105,180,0.3);border-radius:10px;padding:10px 14px;font-size:0.85rem;cursor:pointer;">Later</button>
-  </div>
-</div>
-
-<script>
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  deferredPrompt = e;
-  if (!localStorage.getItem('pwa-dismissed-seamrite')) {
-    setTimeout(() => { document.getElementById('pwaInstallBanner').style.display = 'block'; }, 3000);
-  }
-});
-function installPWA() {
-  document.getElementById('pwaInstallBanner').style.display = 'none';
-  if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(() => { deferredPrompt = null; }); }
-}
-function dismissPWA() {
-  document.getElementById('pwaInstallBanner').style.display = 'none';
-  localStorage.setItem('pwa-dismissed-seamrite', '1');
-}
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW error', e));
-  });
-}
-</script>
-
-
-
 <script>
 (function() {
   var btn = document.getElementById("translateBtn");
